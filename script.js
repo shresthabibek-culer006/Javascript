@@ -210,9 +210,6 @@ const greatestAmongThree = (a, b, c) => {
 
 console.log(greatestAmongThree(34,56,45));
 
-// ===============================
-// QUICK PRACTICE - ALL CONCEPTS
-// ===============================
 
 // ========== ARITHMETIC OPERATORS ==========
 let a = 10, b = 3;
@@ -627,6 +624,33 @@ function calculateAge(birthYear) {
 
 console.log(calculateAge(2004)); // ~22
 console.log(calculateAge(2000)); // ~26
+
+const pcps_students = [
+  { name: "Alice", score: 92 },
+  { name: "Bob", score: 45 },
+  { name: "Charlie", score: 73 },
+  { name: "Diana", score: 58 },
+  { name: "Eve", score: 88 },
+];
+
+function getGrade(score) {
+  if (score >= 90) {
+    return "A";
+  } else if (score >= 75) {
+    return "B";
+  } else if (score >= 60) {
+    return "C";
+  } else {
+    return "Fail";
+  }
+}
+
+for (let i = 0; i < pcps_students.length; i++) {
+  const pcps_students = pcps_students[i];
+  const grade = getGrade(pcps_students.score);
+  console.log(`${pcps_students.name} scored ${pcps_students.score} → Grade: ${grade}`);
+}
+
 
 // ===============================
 // END OF PRACTICE
