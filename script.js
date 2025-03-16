@@ -651,6 +651,23 @@ for (let i = 0; i < pcps_students.length; i++) {
   console.log(`${pcps_students.name} scored ${pcps_students.score} → Grade: ${grade}`);
 }
 
+// Even Odd Checker
+
+const unique_numbers = [12, 7, 34, 19, 56, 3, 88, 45, 60, 21];
+
+function checkNumber(num) {
+  if (num % 2 === 0) {
+    return { number: num, type: "Even", category: num > 50 ? "Big" : "Small" };
+  } else {
+    return { number: num, type: "Odd", category: num > 50 ? "Big" : "Small" };
+  }
+}
+
+for (let i = 0; i < unique_numbers.length; i++) {
+  const result = checkNumber(unique_numbers[i]);
+  console.log(`${result.unique_numbers} → ${result.type} → ${result.category}`);
+}
+
 // Simple Calculator
 
 const numbs = [10, 25, 37, 48, 55];
