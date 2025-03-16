@@ -627,7 +627,7 @@ console.log(calculateAge(2000)); // ~26
 
 const pcps_students = [
   { name: "Alice", score: 92 },
-  { name: "Bob", score: 45 },
+  { name: "Bob", score: 25 },
   { name: "Charlie", score: 73 },
   { name: "Diana", score: 58 },
   { name: "Eve", score: 88 },
