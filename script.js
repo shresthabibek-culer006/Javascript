@@ -63,9 +63,40 @@ console.log(blockVar); shows ERROR blockVar is not defined because blockVar is i
 console.log(mainCharacter); // undefined - hoisted 
 var mainCharacter = "Bibek";
 
+/*
 
 console.log(playerName); // Error - TDZ 
 let playerName = "Shradiya";
 console.log(playerName);
 
+*/
 
+// ===============================
+// 5. DATA TYPES
+// ===============================
+
+// Primitive Data Types 
+let writer = "MhrznSh";
+let writer_age = 17;
+let does_she_has_a_good_handwriting = true;
+let kiss = null;
+let Playscore = undefined;
+let big_number = 12345678901234567890n;
+let player_id = Symbol("id");
+
+
+// Reference Data Types
+
+const fruits = ["Pineapple","Banana","Mango","Apple","Kiwi","Orange"];
+
+const good_girl = {
+  girl_name : "Shradiya",
+  girl_age: 17
+}
+
+function isSheMyBabe(){
+  const her_name = "Shradiya Maharjan";
+  console.log(her_name,"! She is my Babyyyyyyy💋");
+}
+
+isSheMyBabe();
