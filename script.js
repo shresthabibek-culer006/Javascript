@@ -27,3 +27,29 @@ let city = "Kathmandu" // Declaration and Initialization at a same time
 
 console.log("Username : " , username);
 console.log("City : " , city);
+
+
+// ===============================
+// 3. SCOPE
+// ===============================
+
+let globalVar = "I'm a global Variable";
+
+function scopeExample(){
+    var functionVar = "This is functional Variable";
+
+    if(true){
+      let blockVar = "This a blocked based Variable";
+      console.log(blockVar);
+    }
+
+    console.log(functionVar);
+}
+
+scopeExample();
+
+console.log(globalVar);
+/*
+console.log(blockVar); shows ERROR blockVar is not defined because blockVar is initialized inside the fucntion.
+*/
+
