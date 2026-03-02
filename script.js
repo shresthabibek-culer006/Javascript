@@ -173,3 +173,11 @@ for(let i = 0 ; i <= 5 ; i++){
   console.log("Number : ",i);
 }
 
+// ===============================
+// 13. NaN Example
+// ===============================
+
+let result = 2 * "text";
+console.log(result);        // NaN
+console.log(typeof result); // number
+
