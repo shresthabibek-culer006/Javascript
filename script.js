@@ -1,5 +1,13 @@
-let age = 20;
+// ===============================
+// 1. VARIABLES (let, const)
+// ===============================
 
-if (age > 18 || age > 60) {
-  console.log("You get discount!"); // At least one true
-}
+const PI = 3.14;
+let age = 19;
+
+console.log("Age:", age);
+
+age = 20; // reassign allowed
+console.log("Updated Age:", age);
+
+
