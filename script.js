@@ -152,3 +152,17 @@ function allowToVote(){
 
 console.log(allowToVote());
 
+// ===============================
+// 11. OBJECT + ARRAY PRACTICE
+// ===============================
+
+const student = {
+  student_name : "Shradiya",
+  student_age : 17,
+  skills : ["HTML","CSS","JAVASCRIPT"]
+}
+
+console.log(student.student_name);
+console.log(student.skills[1]);
+
+
