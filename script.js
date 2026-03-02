@@ -181,3 +181,8 @@ let result = 2 * "text";
 console.log(result);        // NaN
 console.log(typeof result); // number
 
+// ===============================
+// END PRACTICE FILE
+// ===============================
+
+console.log("Practice Finished ✅");
