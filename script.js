@@ -181,6 +181,14 @@ let result = 2 * "text";
 console.log(result);        // NaN
 console.log(typeof result); // number
 
+
+// =====================================
+// 14. ARROW FUNCTIONS
+// =====================================
+
+const add = (a,b) => a + b;
+console.log(add(56,4));
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
