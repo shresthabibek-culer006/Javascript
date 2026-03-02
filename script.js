@@ -110,3 +110,12 @@ console.log("5"+4); // 54 = it concatenates doesn't do the math
 console.log("5"-4); // 1 = it converts string to number because of - operator
 console.log("Shradiya"-4); // NaN = String - Number it's basically the failed Number Operation
 
+// ===============================
+// 8. == vs ===
+// ===============================
+
+console.log(5 == "5");   // true = checks the value only
+console.log(5 === "5");  // false = checks the type and the value 
+
+console.log(0 == false); // 0 is false so false == flase it true
+console.log(0 === false); // 0 is a number and false is a boolean so it's false
