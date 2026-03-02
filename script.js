@@ -186,9 +186,29 @@ console.log(typeof result); // number
 // 14. ARROW FUNCTIONS
 // =====================================
 
-const add = (a,b) => a + b;
-console.log(add(56,4));
+const cube = num => {
+  return num * num * num
+}
 
+console.log(cube(7));
+
+
+const greatestAmongThree = (a, b, c) => {
+  if (a > b && a > c) {
+    return "A is the Greatest Among All";
+  } 
+  else if (b > a && b > c) {
+    return "B is the Greatest Among All";
+  } 
+  else if (c > a && c > b) {
+    return "C is the Greatest Among All";
+  } 
+  else {
+    return "Some values are equal";
+  }
+};
+
+console.log(greatestAmongThree(34,56,45));
 // ===============================
 // END PRACTICE FILE
 // ===============================
