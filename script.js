@@ -134,3 +134,21 @@ if (value) {
 
 // Falsy Value = false , "" , 0 , undefined , null , Nan , document.All
 // Truthy Valur = true , 1 and everything are truthy except the falsy values.
+
+// ===============================
+// 10. FUNCTION EXAMPLE
+// ===============================
+
+function allowToVote(){
+  let voter_name = "Haku Maicha";
+  let voter_age = 17; 
+
+  if (voter_age >= 18){
+    console.log("You are allowed to vote for a ghanti 🔔")
+  }else{
+    console.log("You are not allowed to vote for a ghanti 🔔")
+  }
+}
+
+console.log(allowToVote());
+
