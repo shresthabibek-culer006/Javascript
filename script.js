@@ -119,3 +119,18 @@ console.log(5 === "5");  // false = checks the type and the value
 
 console.log(0 == false); // 0 is false so false == flase it true
 console.log(0 === false); // 0 is a number and false is a boolean so it's false
+
+// ===============================
+// 9. TRUTHY & FALSY
+// ===============================
+
+let value = "";
+
+if (value) {
+  console.log("Truthy");
+} else {
+  console.log("Falsy value detected");
+}
+
+// Falsy Value = false , "" , 0 , undefined , null , Nan , document.All
+// Truthy Valur = true , 1 and everything are truthy except the falsy values.
