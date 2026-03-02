@@ -53,3 +53,19 @@ console.log(globalVar);
 console.log(blockVar); shows ERROR blockVar is not defined because blockVar is initialized inside the fucntion.
 */
 
+// ===============================
+// 4. HOISTING
+// ===============================
+
+// Hoisting means once the variable is initialized js automatically creates the declaration on the top of the memory.
+// TDZ = TEMPORAL DEAD ZONE means the time between hosting to initialization.
+
+console.log(mainCharacter); // undefined - hoisted 
+var mainCharacter = "Bibek";
+
+
+console.log(playerName); // Error - TDZ 
+let playerName = "Shradiya";
+console.log(playerName);
+
+
