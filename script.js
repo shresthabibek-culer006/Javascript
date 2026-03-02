@@ -100,3 +100,13 @@ function isSheMyBabe(){
 }
 
 isSheMyBabe();
+
+// ===============================
+// 7. TYPE COERCION
+// ===============================
+
+console.log(5+4); // 9 = it simply just do add
+console.log("5"+4); // 54 = it concatenates doesn't do the math
+console.log("5"-4); // 1 = it converts string to number because of - operator
+console.log("Shradiya"-4); // NaN = String - Number it's basically the failed Number Operation
+
