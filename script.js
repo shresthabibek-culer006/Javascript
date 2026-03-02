@@ -165,4 +165,11 @@ const student = {
 console.log(student.student_name);
 console.log(student.skills[1]);
 
+// ===============================
+// 12. LOOP PRACTICE
+// ===============================
+
+for(let i = 0 ; i <= 5 ; i++){
+  console.log("Number : ",i);
+}
 
