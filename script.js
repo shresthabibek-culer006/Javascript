@@ -215,6 +215,19 @@ const checkOddEven = num =>
 
 console.log(checkOddEven(4));
 
+
+const checkPositiveNegative = num => {
+    if(num > 0){
+      return "Positive";
+    }else if (num < 0){
+      return "Negative";
+    }else{
+      return "Zero";
+    }
+} 
+
+console.log(checkPositiveNegative(234234))
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
