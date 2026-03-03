@@ -209,6 +209,12 @@ const greatestAmongThree = (a, b, c) => {
 };
 
 console.log(greatestAmongThree(34,56,45));
+
+const checkOddEven = num =>
+   num % 2 == 0 ? "Even" : "Odd";
+
+console.log(checkOddEven(4));
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
