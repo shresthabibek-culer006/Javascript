@@ -258,7 +258,13 @@ function isPalindrome(str) {
     const reversed = str.split('').reverse().join('');
     return str === reversed;
 }
-console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("mom")); // true
+
+// Find largest number in array
+function findMax(arr) {
+    return Math.max(...arr);
+}
+console.log(findMax([3, 7, 2, 9, 1])); // 9
 
 
 // ===============================
