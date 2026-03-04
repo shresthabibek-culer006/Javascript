@@ -228,6 +228,25 @@ const checkPositiveNegative = num => {
 
 console.log(checkPositiveNegative(234234))
 
+const sumOfNum = n => {
+  let sum = 0
+  for(let i = 1; i <= n; i++){
+      sum += i;
+  }
+  return sum;
+}
+
+console.log(sumOfNum(8));
+
+
+// FizzBuzz - Print 1-40, "Fizz" for multiples of 3, "Buzz" for 5, "FizzBuzz" for both
+for(let i = 1; i <= 40; i++) {
+    if(i % 15 === 0) console.log("FizzBuzz");
+    else if(i % 3 === 0) console.log("Fizz");
+    else if(i % 5 === 0) console.log("Buzz");
+    else console.log(i);
+}
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
