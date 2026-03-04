@@ -247,6 +247,12 @@ for(let i = 1; i <= 40; i++) {
     else console.log(i);
 }
 
+// Reverse a string
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+console.log(reverseString("hello")); // olleh
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
