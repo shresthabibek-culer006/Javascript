@@ -251,7 +251,15 @@ for(let i = 1; i <= 40; i++) {
 function reverseString(str) {
     return str.split('').reverse().join('');
 }
-console.log(reverseString("hello")); // olleh
+console.log(reverseString("shradiya"));
+
+// Check if word is palindrome
+function isPalindrome(str) {
+    const reversed = str.split('').reverse().join('');
+    return str === reversed;
+}
+console.log(isPalindrome("racecar")); // true
+
 
 // ===============================
 // END PRACTICE FILE
