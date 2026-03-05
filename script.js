@@ -305,6 +305,13 @@ let numbers = [-2, 5, -7, 10, 3];
 let positive = numbers.filter(n => n > 0);
 console.log(positive);
 
+// Average of numbers
+let nums = [10, 20, 30, 40];
+let avg = nums.reduce((a,b) => a+b) / nums.length;
+console.log(avg);
+
+
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
