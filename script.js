@@ -300,6 +300,11 @@ console.log(doubled);
 let text = "hello";
 console.log(text.length);
 
+// Filter positive numbers
+let numbers = [-2, 5, -7, 10, 3];
+let positive = numbers.filter(n => n > 0);
+console.log(positive);
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
