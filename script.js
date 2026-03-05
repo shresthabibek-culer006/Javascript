@@ -318,6 +318,10 @@ console.log(myArray.length === 0 ? "Empty" : "Has items");
 let haha_name = "bibek shrestha";
 console.log(haha_name.toUpperCase());
 
+// Find minimum number
+let values = [45, 12, 67, 23, 8];
+console.log(Math.min(...values));
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
