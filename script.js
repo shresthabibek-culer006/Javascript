@@ -296,6 +296,10 @@ let arr = [1, 2, 3, 4, 5];
 let doubled = arr.map(x => x * 2);
 console.log(doubled);
 
+// Count characters
+let text = "hello";
+console.log(text.length);
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
