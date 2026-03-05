@@ -314,6 +314,10 @@ console.log(avg);
 let myArray = [];
 console.log(myArray.length === 0 ? "Empty" : "Has items");
 
+// Convert to uppercase
+let haha_name = "bibek shrestha";
+console.log(haha_name.toUpperCase());
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
