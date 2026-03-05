@@ -291,6 +291,11 @@ function isPrime(num) {
 console.log(isPrime(17)); // true
 console.log(isPrime(10)); // false
 
+// Multiply array by 2
+let arr = [1, 2, 3, 4, 5];
+let doubled = arr.map(x => x * 2);
+console.log(doubled);
+
 // ===============================
 // END PRACTICE FILE
 // ===============================
