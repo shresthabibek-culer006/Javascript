@@ -310,7 +310,9 @@ let nums = [10, 20, 30, 40];
 let avg = nums.reduce((a,b) => a+b) / nums.length;
 console.log(avg);
 
-
+// Check empty array
+let myArray = [];
+console.log(myArray.length === 0 ? "Empty" : "Has items");
 
 // ===============================
 // END PRACTICE FILE
