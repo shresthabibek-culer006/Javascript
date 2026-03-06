@@ -296,3 +296,28 @@ console.log(min_random_numbers); // 576
 // ===============================
 
 console.log("Practice Finished ✅");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Array Methods Practice - Map
+const prices = [100, 200, 300, 400];
+const discounted = prices.map(price => price * 0.9);
+console.log(discounted); // 10% discount
