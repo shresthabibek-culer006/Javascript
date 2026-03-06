@@ -326,3 +326,8 @@ console.log(discounted); // 10% discount
 const ages = [15, 22, 18, 30, 12, 25];
 const adults = ages.filter(age => age >= 18);
 console.log(adults); // [22, 18, 30, 25]
+
+// Array Methods Practice - Reduce
+const numbers = [1, 2, 3, 4, 5];
+const total = numbers.reduce((sum, num) => sum + num, 0);
+console.log(total); // 15
