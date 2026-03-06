@@ -321,3 +321,8 @@ console.log("Practice Finished ✅");
 const prices = [100, 200, 300, 400];
 const discounted = prices.map(price => price * 0.9);
 console.log(discounted); // 10% discount
+
+// Array Methods Practice - Filter
+const ages = [15, 22, 18, 30, 12, 25];
+const adults = ages.filter(age => age >= 18);
+console.log(adults); // [22, 18, 30, 25]
