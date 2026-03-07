@@ -331,3 +331,12 @@ console.log(adults); // [22, 18, 30, 25]
 const numbers = [1, 2, 3, 4, 5];
 const total = numbers.reduce((sum, num) => sum + num, 0);
 console.log(total); // 15
+
+// Object Destructuring
+const user = {
+    name: "Bibek",
+    user_age: 20,
+    user_city: "Kathmandu"
+};
+const {name, user_age, user_city} = user;
+console.log(`${name} is ${age} years old from ${city}`);
