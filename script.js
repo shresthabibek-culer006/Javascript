@@ -340,3 +340,13 @@ const user = {
 };
 const {name, user_age, user_city} = user;
 console.log(`${name} is ${age} years old from ${city}`);
+
+// Spread Operator
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combined = [...arr1, ...arr2];
+console.log(combined); // [1, 2, 3, 4, 5, 6]
+
+const person = {name: "Bibek", age: 20};
+const updatedPerson = {...person, city: "Kathmandu"};
+console.log(updatedPerson);
