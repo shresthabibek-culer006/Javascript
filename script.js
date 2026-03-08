@@ -350,3 +350,9 @@ console.log(combined); // [1, 2, 3, 4, 5, 6]
 const person = {name: "Bibek", age: 20};
 const updatedPerson = {...person, city: "Kathmandu"};
 console.log(updatedPerson);
+
+// Template Literals
+const playerName = "Messi";
+const goals = 700;
+const message = `${playerName} has scored ${goals} goals in his career!`;
+console.log(message);
