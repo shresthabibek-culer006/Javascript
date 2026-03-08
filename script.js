@@ -391,3 +391,11 @@ console.log(hasHighScore); // true
 
 const allPassed = scores.every(score => score >= 40);
 console.log(allPassed); // true
+
+// Sort and Reverse
+const nums = [5, 2, 8, 1, 9];
+const ascending = [...nums].sort((a, b) => a - b);
+console.log(ascending); // [1, 2, 5, 8, 9]
+
+const descending = [...nums].sort((a, b) => b - a);
+console.log(descending); // [9, 8, 5, 2, 1]
