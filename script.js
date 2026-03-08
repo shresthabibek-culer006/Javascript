@@ -371,3 +371,16 @@ const my_fruits = ["apple", "banana", "mango", "orange"];
 my_fruits.forEach((fruit, index) => {
     console.log(`${index + 1}. ${fruit}`);
 });
+
+// Find and FindIndex
+const students = [
+    {name: "Ram", marks: 85},
+    {name: "Shyam", marks: 92},
+    {name: "Hari", marks: 78}
+];
+const topStudent = students.find(student => student.marks > 90);
+console.log(topStudent); // {name: "Shyam", marks: 92}
+
+const index = students.findIndex(student => student.name === "Hari");
+console.log(index); // 2
+
