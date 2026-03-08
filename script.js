@@ -384,3 +384,10 @@ console.log(topStudent); // {name: "Shyam", marks: 92}
 const index = students.findIndex(student => student.name === "Hari");
 console.log(index); // 2
 
+// Some and Every
+const scores = [45, 67, 89, 92, 78];
+const hasHighScore = scores.some(score => score > 90);
+console.log(hasHighScore); // true
+
+const allPassed = scores.every(score => score >= 40);
+console.log(allPassed); // true
