@@ -356,3 +356,12 @@ const playerName = "Messi";
 const goals = 700;
 const message = `${playerName} has scored ${goals} goals in his career!`;
 console.log(message);
+
+// Ternary Operator
+const score = 85;
+const score_result = score >= 50 ? "Pass" : "Fail";
+console.log(score_resultresult);
+
+const userAge = 17;
+const canVote = userAge >= 18 ? "Can vote" : "Cannot vote";
+console.log(canVote);
