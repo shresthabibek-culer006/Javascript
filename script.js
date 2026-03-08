@@ -365,3 +365,9 @@ console.log(score_resultresult);
 const userAge = 17;
 const canVote = userAge >= 18 ? "Can vote" : "Cannot vote";
 console.log(canVote);
+
+// forEach Loop
+const my_fruits = ["apple", "banana", "mango", "orange"];
+my_fruits.forEach((fruit, index) => {
+    console.log(`${index + 1}. ${fruit}`);
+});
