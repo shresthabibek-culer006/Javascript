@@ -210,42 +210,10 @@ const greatestAmongThree = (a, b, c) => {
 
 console.log(greatestAmongThree(34,56,45));
 
-const checkOddEven = num =>
-   num % 2 == 0 ? "Even" : "Odd";
+// =====================================
+// 14. ARROW FUNCTIONS
+// =====================================
 
-console.log(checkOddEven(4));
-
-
-const checkPositiveNegative = num => {
-    if(num > 0){
-      return "Positive";
-    }else if (num < 0){
-      return "Negative";
-    }else{
-      return "Zero";
-    }
-} 
-
-console.log(checkPositiveNegative(234234))
-
-const sumOfNum = n => {
-  let sum = 0
-  for(let i = 1; i <= n; i++){
-      sum += i;
-  }
-  return sum;
-}
-
-console.log(sumOfNum(8));
-
-
-// FizzBuzz - Print 1-40, "Fizz" for multiples of 3, "Buzz" for 5, "FizzBuzz" for both
-for(let i = 1; i <= 40; i++) {
-    if(i % 15 === 0) console.log("FizzBuzz");
-    else if(i % 3 === 0) console.log("Fizz");
-    else if(i % 5 === 0) console.log("Buzz");
-    else console.log(i);
-}
 
 // Reverse a string
 function reverseString(str) {
@@ -260,67 +228,28 @@ function isPalindrome(str) {
 }
 console.log(isPalindrome("mom")); // true
 
-// Find largest number in array
-function findMax(arr) {
-    return Math.max(...arr);
-}
-console.log(findMax([3, 7, 2, 9, 1])); // 9
-
-
-// Calculate factorial
-function factorial(n) {
-    if(n === 0 || n === 1) return 1;
-    return n * factorial(n - 1);
-}
-console.log(factorial(5)); // 120
-
-// Sum only even numbers from array
-function sumEvenNumbers(arr) {
-    return arr.filter(num => num % 2 === 0).reduce((sum, num) => sum + num, 0);
-}
-console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6])); // 12
-
-// Check if number is prime
-function isPrime(num) {
-    if(num <= 1) return false;
-    for(let i = 2; i <= Math.sqrt(num); i++) {
-        if(num % i === 0) return false;
-    }
-    return true;
-}
-console.log(isPrime(17)); // true
-console.log(isPrime(10)); // false
-
 // Multiply array by 2
 let arr = [1, 2, 3, 4, 5];
 let doubled = arr.map(x => x * 2);
 console.log(doubled);
 
 // Count characters
-let text = "hello";
+let text = "Shradiya Maharjan";
 console.log(text.length);
 
-// Filter positive numbers
-let numbers = [-2, 5, -7, 10, 3];
-let positive = numbers.filter(n => n > 0);
-console.log(positive);
-
-// Average of numbers
-let nums = [10, 20, 30, 40];
-let avg = nums.reduce((a,b) => a+b) / nums.length;
-console.log(avg);
-
-// Check empty array
-let myArray = [];
-console.log(myArray.length === 0 ? "Empty" : "Has items");
 
 // Convert to uppercase
 let haha_name = "bibek shrestha";
 console.log(haha_name.toUpperCase());
 
-// Find minimum number
-let values = [45, 12, 67, 23, 8];
-console.log(Math.min(...values));
+// Find maximum number
+let big_nums = [23,54,75,76,354,556,];
+console.log(Math.max(...big_nums));
+
+// Find minimun number
+let random_numbers = [436455,4654,665,576,577,6677,867657,5764,4675,776];
+min_random_numbers = Math.min(...random_numbers);
+console.log(min_random_numbers); 
 
 // ===============================
 // END PRACTICE FILE
