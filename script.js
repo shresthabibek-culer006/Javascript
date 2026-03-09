@@ -215,41 +215,81 @@ console.log(greatestAmongThree(34,56,45));
 // =====================================
 
 
-// Reverse a string
+// ===============================
+// JAVASCRIPT PRACTICE SESSION
+// ===============================
+
+// Practicing core JS concepts: string manipulation, array methods,
+// built-in functions, and ES6 features like arrow functions and spread operator
+// ===============================
+
+// STRING MANIPULATION: Reverse a string
+// Using split() to convert string to array, reverse() to flip it, join() to make it string again
 function reverseString(str) {
     return str.split('').reverse().join('');
 }
-console.log(reverseString("shradiya"));
+console.log(reverseString("shradiya")); // Output: "ayidarhs"
 
-// Check if word is palindrome
+// ===============================
+
+// PALINDROME CHECKER: Check if word reads same forwards and backwards
+// Palindrome = word that's same when reversed (e.g., "mom", "racecar")
 function isPalindrome(str) {
     const reversed = str.split('').reverse().join('');
     return str === reversed;
 }
 console.log(isPalindrome("mom")); // true
+console.log(isPalindrome("hello")); // false
 
-// Multiply array by 2
+// ===============================
+
+// ARRAY METHOD: Multiply each element by 2 using map()
+// map() creates new array by applying function to each element
 let arr = [1, 2, 3, 4, 5];
 let doubled = arr.map(x => x * 2);
-console.log(doubled);
+console.log(doubled); // [2, 4, 6, 8, 10]
 
-// Count characters
+// ===============================
+
+// STRING PROPERTY: Count total characters in a string
+// .length property returns number of characters (including spaces)
 let text = "Shradiya Maharjan";
-console.log(text.length);
+console.log(text.length); // 17
 
+// ===============================
 
-// Convert to uppercase
+// STRING METHOD: Convert string to uppercase
+// .toUpperCase() transforms all letters to capital letters
 let haha_name = "bibek shrestha";
-console.log(haha_name.toUpperCase());
+console.log(haha_name.toUpperCase()); // "BIBEK SHRESTHA"
 
-// Find maximum number
-let big_nums = [23,54,75,76,354,556,];
-console.log(Math.max(...big_nums));
+// ===============================
 
-// Find minimun number
-let random_numbers = [436455,4654,665,576,577,6677,867657,5764,4675,776];
-min_random_numbers = Math.min(...random_numbers);
-console.log(min_random_numbers); 
+// MATH OBJECT + SPREAD OPERATOR: Find maximum number in array
+// Math.max() finds largest number, ...spread unpacks array into individual arguments
+let big_nums = [23, 54, 75, 76, 354, 556];
+console.log(Math.max(...big_nums)); // 556
+
+// ===============================
+
+// MATH OBJECT + SPREAD OPERATOR: Find minimum number in array
+// Math.min() finds smallest number from the array
+let random_numbers = [436455, 4654, 665, 576, 577, 6677, 867657, 5764, 4675, 776];
+let min_random_numbers = Math.min(...random_numbers);
+console.log(min_random_numbers); // 576
+
+// ===============================
+
+// KEY CONCEPTS PRACTICED:
+
+// ✓ String methods: split(), reverse(), join(), toUpperCase()
+// ✓ Array methods: map()
+// ✓ Arrow functions (=>)
+// ✓ Spread operator (...)
+// ✓ Math object: Math.max(), Math.min()
+// ✓ String properties: .length
+// ✓ Functions and return statements
+// ===============================
 
 // ===============================
 // END PRACTICE FILE
