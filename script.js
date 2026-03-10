@@ -210,9 +210,12 @@ const greatestAmongThree = (a, b, c) => {
 
 console.log(greatestAmongThree(34,56,45));
 
-// =====================================
-// 14. ARROW FUNCTIONS
-// =====================================
+
+
+
+
+
+
 
 
 // ===============================
@@ -295,7 +298,7 @@ console.log(min_random_numbers); // 576
 // END PRACTICE FILE
 // ===============================
 
-console.log("Practice Finished ✅");
+console.log("Practice Finished ✅")
 
 
 
@@ -316,6 +319,42 @@ console.log("Practice Finished ✅");
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 // Array Methods Practice - Map
 const prices = [100, 200, 300, 400];
@@ -399,3 +438,5 @@ console.log(ascending); // [1, 2, 5, 8, 9]
 
 const descending = [...nums].sort((a, b) => b - a);
 console.log(descending); // [9, 8, 5, 2, 1]
+
+*/
