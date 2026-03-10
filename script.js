@@ -229,6 +229,17 @@ console.log(10 <= 10);   // true
 console.log(5 != "5");   // false
 console.log(5 !== "5");  // true
 
+// Logical Operators
+console.log(true && false);  // false (AND)
+console.log(true || false);  // true (OR)
+console.log(!true);          // false (NOT)
+
+// Assignment Operators
+let x = 10;
+x += 5;  // x = 15
+x -= 3;  // x = 12
+x *= 2;  // x = 24
+x /= 4;  // x = 6
 
 
 
