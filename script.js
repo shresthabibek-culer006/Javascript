@@ -248,6 +248,63 @@ count++;  // 6 (post-increment)
 count--;  // 6 (post-decrement)
 
 
+// IF - ELSE 
+
+// Multiple conditions
+let player_username = "bibek";
+let password = "1234";
+if (player_username === "bibek" && password === "1234") {
+    console.log("Login successful");
+} else {
+    console.log("Invalid");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ===============================
 // JAVASCRIPT PRACTICE SESSION
 // ===============================
