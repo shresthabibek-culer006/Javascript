@@ -221,6 +221,13 @@ console.log(a / b);  // 3.333
 console.log(a % b);  // 1 (remainder)
 console.log(a ** b); // 1000 (10^3)
 
+// Comparison Operators
+console.log(5 == "5");   // true (loose)
+console.log(5 === "5");  // false (strict) ✅
+console.log(10 > 5);     // true
+console.log(10 <= 10);   // true
+console.log(5 != "5");   // false
+console.log(5 !== "5");  // true
 
 
 
