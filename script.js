@@ -259,8 +259,10 @@ if (player_username === "bibek" && password === "1234") {
     console.log("Invalid");
 }
 
-
-
+// Nested ternary
+let num = 0;
+let sign = num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
+console.log(sign); // "Zero"
 
 
 
