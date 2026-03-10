@@ -210,7 +210,16 @@ const greatestAmongThree = (a, b, c) => {
 
 console.log(greatestAmongThree(34,56,45));
 
+// Quick Practice 
 
+// Arithmetic Operators
+let a = 10, b = 3;
+console.log(a + b);  // 13
+console.log(a - b);  // 7
+console.log(a * b);  // 30
+console.log(a / b);  // 3.333
+console.log(a % b);  // 1 (remainder)
+console.log(a ** b); // 1000 (10^3)
 
 
 
