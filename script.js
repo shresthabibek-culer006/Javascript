@@ -241,8 +241,11 @@ x -= 3;  // x = 12
 x *= 2;  // x = 24
 x /= 4;  // x = 6
 
-
-
+// Increment/Decrement
+let count = 5;
+count++;  // 6 (post-increment)
+++count;  // 7 (pre-increment)
+count--;  // 6 (post-decrement)
 
 
 // ===============================
