@@ -358,9 +358,9 @@ console.log(numbers_sum); // 15
 
 // Practical example
 const students = [
-    {name: "Ram", marks: 85},
-    {name: "Shyam", marks: 92},
-    {name: "Hari", marks: 78}
+    {name: "Bibek", marks: 85},
+    {name: "Shradiya", marks: 92},
+    {name: "Haku", marks: 78}
 ];
 
 const toppers = students.filter(student => student.marks >= 80);
