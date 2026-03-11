@@ -278,7 +278,17 @@ console.log(her_fruits[0]); // "apple"
 console.log(her_fruits[2]); // "mango"
 
 // Array length
-console.log(fruits.length); // 3
+console.log(her_fruits.length); // 3
+
+// Add elements
+her_fruits.push("orange");     // Add to end
+her_fruits.unshift("grapes");  // Add to start
+console.log(her_fruits); // ["grapes", "apple", "banana", "mango", "orange"]
+
+// Remove elements
+fruits.pop();      // Remove from end
+fruits.shift();    // Remove from start
+console.log(her_fruits); // ["apple", "banana", "mango"]
 
 
 
