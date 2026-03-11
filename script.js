@@ -333,8 +333,16 @@ greetUser();          // "Welcome, Guest!"
 greetUser("Bibek");   // "Welcome, Bibek!"
 
 
+//  Arrow Functions
 
+const addArrow = (a,b) => {
+  return a,b;
+}
+console.log(addArrow(34,545));
 
+// Single parameter (no parentheses needed)
+const square = num => num * num;
+console.log(square(5)); // 25
 
 
 
