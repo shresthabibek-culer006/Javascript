@@ -264,9 +264,8 @@ let num = 0;
 let sign = num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
 console.log(sign); // "Zero"
 
-// ========================================
+
 // ARRAYS
-// ========================================
 
 // Creating arrays
 let her_fruits = ["apple", "banana", "mango"];
@@ -304,8 +303,34 @@ console.log(some); // ["apple", "kiwi"]
 
 
 
+// Functions
+
+// Function Declaration
+function greet() {
+    console.log("Hello!");
+}
+greet(); // Call function
+
+// Function with parameters
+function sayHello(name) {
+    console.log(`Hello, ${name}!`);
+}
+sayHello("Bibek"); // "Hello, Bibek!"
+
+// Function with return
+function addNumbers(a, b) {
+    return a + b;
+}
+let sum = addNumbers(5, 3);
+console.log(sum); // 8
 
 
+// Default parameters
+function greetUser(name = "Guest") {
+    console.log(`Welcome, ${name}!`);
+}
+greetUser();          // "Welcome, Guest!"
+greetUser("Bibek");   // "Welcome, Bibek!"
 
 
 
