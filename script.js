@@ -264,7 +264,21 @@ let num = 0;
 let sign = num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
 console.log(sign); // "Zero"
 
+// ========================================
+// ARRAYS
+// ========================================
 
+// Creating arrays
+let her_fruits = ["apple", "banana", "mango"];
+let numbers = [1, 2, 3, 4, 5];
+let mixed = [1, "hello", true, null];
+
+// Access elements
+console.log(her_fruits[0]); // "apple"
+console.log(her_fruits[2]); // "mango"
+
+// Array length
+console.log(fruits.length); // 3
 
 
 
