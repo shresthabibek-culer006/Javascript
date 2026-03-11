@@ -290,6 +290,9 @@ fruits.pop();      // Remove from end
 fruits.shift();    // Remove from start
 console.log(her_fruits); // ["apple", "banana", "mango"]
 
+// Check if element exists
+console.log(her_fruits.includes("apple")); // true
+console.log(her_fruits.indexOf("kiwi"));   // 1
 
 
 
