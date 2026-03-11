@@ -344,7 +344,17 @@ console.log(addArrow(34,545));
 const square = num => num * num;
 console.log(square(5)); // 25
 
+// Arrow function with array methods
+const new_numbers = [1, 2, 3, 4, 5];
 
+const numbers_doubled = new_numbers.map(num => num * 2);
+console.log(numbers_doubled); // [2, 4, 6, 8, 10]
+
+const numbers_evens = new_numbers.filter(num => num % 2 === 0);
+console.log(numbers_evens); // [2, 4]
+
+const numbers_sum = new_numbers.reduce((total, num) => total + num, 0);
+console.log(numbers_sum); // 15
 
 
 
