@@ -292,7 +292,15 @@ console.log(her_fruits); // ["apple", "banana", "mango"]
 
 // Check if element exists
 console.log(her_fruits.includes("apple")); // true
+console.log(her_fruits.includes("litchi")); // false
 console.log(her_fruits.indexOf("kiwi"));   // 1
+
+// Join array to string
+console.log(her_fruits.join(", ")); // "apple, kiwi, mango"
+
+// Slice (extract part)
+let some = her_fruits.slice(0, 2);
+console.log(some); // ["apple", "kiwi"]
 
 
 
