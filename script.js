@@ -356,6 +356,15 @@ console.log(numbers_evens); // [2, 4]
 const numbers_sum = new_numbers.reduce((total, num) => total + num, 0);
 console.log(numbers_sum); // 15
 
+// Practical example
+const students = [
+    {name: "Ram", marks: 85},
+    {name: "Shyam", marks: 92},
+    {name: "Hari", marks: 78}
+];
+
+const toppers = students.filter(student => student.marks >= 80);
+console.log(toppers);
 
 
 
