@@ -392,7 +392,20 @@ console.log(person);
 person.country = "Nepal";
 console.log(person);
 
+// Delete property
+delete person.isStudent;
+console.log(person);
 
+// Nested objects
+const user = {
+    name: "Bibek",
+    address: {
+        city: "Kathmandu",
+        street: "Thamel",
+        zip: 44600
+    }
+};
+console.log(user.address.city); // "Kathmandu"
 
 
 
