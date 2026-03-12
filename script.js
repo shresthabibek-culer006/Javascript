@@ -440,7 +440,24 @@ console.log(Object.entries(dav_student));
 console.log("name" in dav_student); // true
 console.log("salary" in dav_student); // false
 
+// Copy object (shallow copy)
+const studentCopy = {...student};
+studentCopy.age = 21;
+console.log(student.age);     // 20 (original unchanged)
+console.log(studentCopy.age); // 21
 
+// Merge objects
+const basic = {name: "Bibek", age: 20};
+const extra = {city: "Kathmandu", country: "Nepal"};
+const merged = {...basic, ...extra};
+console.log(merged);
+// {name: "Bibek", age: 20, city: "Kathmandu", country: "Nepal"}
+
+// Object destructuring
+const {his_name, his_age, course} = student;
+console.log(his_name);   // "Bibek"
+console.log(his_age);    // 20
+console.log(course); // "Web Dev"
 
 
 
