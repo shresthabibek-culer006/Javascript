@@ -446,6 +446,7 @@ studentCopy.age = 21;
 console.log(student.age);     // 20 (original unchanged)
 console.log(studentCopy.age); // 21
 
+
 // Merge objects
 const basic = {name: "Bibek", age: 20};
 const extra = {city: "Kathmandu", country: "Nepal"};
