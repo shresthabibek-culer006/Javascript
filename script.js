@@ -383,7 +383,14 @@ console.log(person["age"]);    // Bracket notation
 
 
 
+// Modify properties
+person.age = 21;
+person.city = "Pokhara";
+console.log(person);
 
+// Add new property
+person.country = "Nepal";
+console.log(person);
 
 
 
