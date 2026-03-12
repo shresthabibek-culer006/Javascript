@@ -481,7 +481,25 @@ players.forEach(player => {
 const legends = players.filter(p => p.goals >= 500);
 console.log(legends);
 
+// Map - get only names
+const names = players.map(p => p.name);
+console.log(names); // ["Messi", "Ronaldo", "Neymar"]
 
+// Find - get specific player
+const messi = players.find(p => p.name === "Messi");
+console.log(messi);
+
+// Sort by goals (descending)
+const sorted = [...players].sort((a, b) => b.goals - a.goals);
+console.log(sorted);
+
+// Add new player
+players.push({name: "Haaland", goals: 250, team: "Man City"});
+console.log(players);
+
+// Practical example - total goals
+const totalGoals = players.reduce((sum, player) => sum + player.goals, 0);
+console.log(`Total goals: ${totalGoals}`);
 
 
 
