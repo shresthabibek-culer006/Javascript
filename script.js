@@ -472,7 +472,14 @@ const players = [
 // Access specific player
 console.log(players[0].name); // "Messi"
 
+// Loop through array of objects
+players.forEach(player => {
+    console.log(`${player.name} scored ${player.goals} goals`);
+});
 
+// Filter - find players with 500+ goals
+const legends = players.filter(p => p.goals >= 500);
+console.log(legends);
 
 
 
