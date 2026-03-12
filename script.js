@@ -400,12 +400,12 @@ console.log(person);
 const user = {
     name: "Bibek",
     address: {
-        city: "Lalitpur",
+        city: "Lalitpur,Sundhara",
         street: "Thamel",
         zip: 44600
     }
 };
-console.log(user.address.city); // "Lalitpur"
+console.log(user.address.city); // "Lalitpur,Sundhara" 
 
 // Object with methods
 const player = {
