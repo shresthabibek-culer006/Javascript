@@ -461,7 +461,16 @@ console.log(his_age);    // 20
 console.log(course); // "Web Dev"
 
 
+// ARRAY OF OBJECTS (Real World)
 
+const players = [
+    {name: "Messi", goals: 700, team: "Barcelona"},
+    {name: "Ronaldo", goals: 850, team: "Al Nassr"},
+    {name: "Neymar", goals: 400, team: "Al Hilal"}
+];
+
+// Access specific player
+console.log(players[0].name); // "Messi"
 
 
 
