@@ -225,7 +225,7 @@ console.log(a ** b); // 1000 (10^3)
 
 // ========== COMPARISON OPERATORS ==========
 console.log(5 == "5");   // true (loose)
-console.log(5 === "5");  // false (strict) ✅
+console.log(5 === "5");  // false (strict) 
 console.log(10 > 5);     // true
 console.log(10 <= 10);   // true
 console.log(5 != "5");   // false
@@ -506,6 +506,14 @@ console.log(players);
 const totalGoals = players.reduce((sum, player) => sum + player.goals, 0);
 console.log(`Total goals: ${totalGoals}`);
 
+// Print array elements using for loop
+const colors = ["red", "blue", "green", "yellow"];
+
+for (let i = 0; i < colors.length; i++) {
+    console.log(colors[i]);
+}
+
+
 // ===============================
 // END OF PRACTICE
 // ===============================
@@ -525,6 +533,79 @@ console.log(`Total goals: ${totalGoals}`);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------- DIFFERENT ADVANCE SESSION PRACITCE ----------------------------------
 
 // ===============================
 // JAVASCRIPT PRACTICE SESSION
