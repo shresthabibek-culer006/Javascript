@@ -513,6 +513,15 @@ for (let i = 0; i < colors.length; i++) {
     console.log(colors[i]);
 }
 
+// Sum all numbers in array
+const nums = [10, 20, 30, 40, 50];
+let sums = 0;
+
+for (let i = 0; i < nums.length; i++) {
+    sums += nums[i];
+}
+
+console.log("Total:", sums); // 150
 
 // ===============================
 // END OF PRACTICE
