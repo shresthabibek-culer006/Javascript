@@ -501,6 +501,17 @@ console.log(players);
 const totalGoals = players.reduce((sum, player) => sum + player.goals, 0);
 console.log(`Total goals: ${totalGoals}`);
 
+// SAKYOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+
+
+
+
+
+
+
+
+
 
 
 
