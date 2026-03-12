@@ -535,6 +535,16 @@ for (let i = 1; i < numss.length; i++) {
 
 console.log("Largest:", max); // 89
 
+// Reverse array using loop
+const bucket_fruits = ["apple", "banana", "mango", "orange"];
+let reversed = [];
+
+for (let i = bucket_fruits.length - 1; i >= 0; i--) {
+    reversed.push(bucket_fruits[i]);
+}
+
+console.log(reversed); // ["orange", "mango", "banana", "apple"]
+
 // ===============================
 // END OF PRACTICE
 // ===============================
