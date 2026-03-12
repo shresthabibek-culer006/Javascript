@@ -407,7 +407,15 @@ const user = {
 };
 console.log(user.address.city); // "Lalitpur"
 
-
+// Object with methods
+const player = {
+    name: "Messi",
+    goals: 700,
+    celebrate: function() {
+        console.log(`${this.name} celebrates!`);
+    }
+};
+player.celebrate(); // "Messi celebrates!"
 
 
 
