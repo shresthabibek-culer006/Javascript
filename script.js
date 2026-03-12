@@ -210,9 +210,11 @@ const greatestAmongThree = (a, b, c) => {
 
 console.log(greatestAmongThree(34,56,45));
 
-// Quick Practice 
+// ===============================
+// QUICK PRACTICE - ALL CONCEPTS
+// ===============================
 
-// Arithmetic Operators
+// ========== ARITHMETIC OPERATORS ==========
 let a = 10, b = 3;
 console.log(a + b);  // 13
 console.log(a - b);  // 7
@@ -221,7 +223,7 @@ console.log(a / b);  // 3.333
 console.log(a % b);  // 1 (remainder)
 console.log(a ** b); // 1000 (10^3)
 
-// Comparison Operators
+// ========== COMPARISON OPERATORS ==========
 console.log(5 == "5");   // true (loose)
 console.log(5 === "5");  // false (strict) ✅
 console.log(10 > 5);     // true
@@ -229,26 +231,25 @@ console.log(10 <= 10);   // true
 console.log(5 != "5");   // false
 console.log(5 !== "5");  // true
 
-// Logical Operators
+// ========== LOGICAL OPERATORS ==========
 console.log(true && false);  // false (AND)
 console.log(true || false);  // true (OR)
 console.log(!true);          // false (NOT)
 
-// Assignment Operators
+// ========== ASSIGNMENT OPERATORS ==========
 let x = 10;
 x += 5;  // x = 15
 x -= 3;  // x = 12
 x *= 2;  // x = 24
 x /= 4;  // x = 6
 
-// Increment/Decrement
+// ========== INCREMENT/DECREMENT ==========
 let count = 5;
 count++;  // 6 (post-increment)
 ++count;  // 7 (pre-increment)
 count--;  // 6 (post-decrement)
 
-
-// IF - ELSE 
+// ========== IF - ELSE ==========
 
 // Multiple conditions
 let player_username = "bibek";
@@ -259,13 +260,13 @@ if (player_username === "bibek" && password === "1234") {
     console.log("Invalid");
 }
 
+// ========== TERNARY OPERATOR ==========
 // Nested ternary
 let num = 0;
 let sign = num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
 console.log(sign); // "Zero"
 
-
-// ARRAYS
+// ========== ARRAYS ==========
 
 // Creating arrays
 let her_fruits = ["apple", "banana", "mango"];
@@ -285,25 +286,23 @@ her_fruits.unshift("grapes");  // Add to start
 console.log(her_fruits); // ["grapes", "apple", "banana", "mango", "orange"]
 
 // Remove elements
-fruits.pop();      // Remove from end
-fruits.shift();    // Remove from start
+her_fruits.pop();      // Remove from end
+her_fruits.shift();    // Remove from start
 console.log(her_fruits); // ["apple", "banana", "mango"]
 
 // Check if element exists
 console.log(her_fruits.includes("apple")); // true
 console.log(her_fruits.includes("litchi")); // false
-console.log(her_fruits.indexOf("kiwi"));   // 1
+console.log(her_fruits.indexOf("banana"));   // 1
 
 // Join array to string
-console.log(her_fruits.join(", ")); // "apple, kiwi, mango"
+console.log(her_fruits.join(", ")); // "apple, banana, mango"
 
 // Slice (extract part)
 let some = her_fruits.slice(0, 2);
-console.log(some); // ["apple", "kiwi"]
+console.log(some); // ["apple", "banana"]
 
-
-
-// Functions
+// ========== FUNCTIONS ==========
 
 // Function Declaration
 function greet() {
@@ -324,7 +323,6 @@ function addNumbers(a, b) {
 let sum = addNumbers(5, 3);
 console.log(sum); // 8
 
-
 // Default parameters
 function greetUser(name = "Guest") {
     console.log(`Welcome, ${name}!`);
@@ -332,31 +330,38 @@ function greetUser(name = "Guest") {
 greetUser();          // "Welcome, Guest!"
 greetUser("Bibek");   // "Welcome, Bibek!"
 
+// ========== ARROW FUNCTIONS ==========
 
-//  Arrow Functions
-
-const addArrow = (a,b) => {
-  return a,b;
+// Arrow function with return
+const addArrow = (a, b) => {
+    return a + b;
 }
-console.log(addArrow(34,545));
+console.log(addArrow(34, 545)); // 579
+
+// Shorthand (implicit return)
+const addShort = (a, b) => a + b;
+console.log(addShort(10, 20)); // 30
 
 // Single parameter (no parentheses needed)
 const square = num => num * num;
 console.log(square(5)); // 25
 
-// Arrow function with array methods
+// ========== ARROW FUNCTIONS WITH ARRAY METHODS ==========
 const new_numbers = [1, 2, 3, 4, 5];
 
+// Map - double each number
 const numbers_doubled = new_numbers.map(num => num * 2);
 console.log(numbers_doubled); // [2, 4, 6, 8, 10]
 
+// Filter - get even numbers
 const numbers_evens = new_numbers.filter(num => num % 2 === 0);
 console.log(numbers_evens); // [2, 4]
 
+// Reduce - sum all numbers
 const numbers_sum = new_numbers.reduce((total, num) => total + num, 0);
 console.log(numbers_sum); // 15
 
-// Practical example
+// ========== PRACTICAL EXAMPLE ==========
 const students = [
     {name: "Bibek", marks: 85},
     {name: "Shradiya", marks: 92},
@@ -366,8 +371,7 @@ const students = [
 const toppers = students.filter(student => student.marks >= 80);
 console.log(toppers);
 
-
-// OBJECTS
+// ========== OBJECTS ==========
 
 // Creating object
 const person = {
@@ -380,8 +384,6 @@ const person = {
 // Access properties
 console.log(person.name);      // Dot notation
 console.log(person["age"]);    // Bracket notation
-
-
 
 // Modify properties
 person.age = 21;
@@ -396,18 +398,18 @@ console.log(person);
 delete person.isStudent;
 console.log(person);
 
-// Nested objects
+// ========== NESTED OBJECTS ==========
 const user = {
     name: "Bibek",
     address: {
-        city: "Lalitpur,Sundhara",
+        city: "Lalitpur, Sundhara",
         street: "Thamel",
         zip: 44600
     }
 };
-console.log(user.address.city); // "Lalitpur,Sundhara" 
+console.log(user.address.city); // "Lalitpur, Sundhara" 
 
-// Object with methods
+// ========== OBJECT WITH METHODS ==========
 const player = {
     name: "Messi",
     goals: 700,
@@ -417,8 +419,7 @@ const player = {
 };
 player.celebrate(); // "Messi celebrates!"
 
-
-// OBJECT METHODS
+// ========== OBJECT METHODS ==========
 
 const dav_student = {
     name: "Shradiya",
@@ -441,27 +442,31 @@ console.log("name" in dav_student); // true
 console.log("salary" in dav_student); // false
 
 // Copy object (shallow copy)
-const studentCopy = {...student};
+const studentCopy = {...dav_student};
 studentCopy.age = 21;
-console.log(student.age);     // 20 (original unchanged)
-console.log(studentCopy.age); // 21
+console.log(dav_student.age);     // 17 (original unchanged)
+console.log(studentCopy.age);     // 21
 
-
-// Merge objects
+// ========== MERGE OBJECTS ==========
 const basic = {name: "Bibek", age: 20};
 const extra = {city: "Kathmandu", country: "Nepal"};
 const merged = {...basic, ...extra};
 console.log(merged);
 // {name: "Bibek", age: 20, city: "Kathmandu", country: "Nepal"}
 
-// Object destructuring
-const {his_name, his_age, course} = student;
+// ========== OBJECT DESTRUCTURING ==========
+const student_data = {
+    his_name: "Bibek",
+    his_age: 20,
+    his_course: "Web Dev"
+};
+
+const {his_name, his_age, his_course} = student_data;
 console.log(his_name);   // "Bibek"
 console.log(his_age);    // 20
-console.log(course); // "Web Dev"
+console.log(his_course); // "Web Dev"
 
-
-// ARRAY OF OBJECTS (Real World)
+// ========== ARRAY OF OBJECTS (Real World) ==========
 
 const players = [
     {name: "Messi", goals: 700, team: "Barcelona"},
@@ -470,7 +475,7 @@ const players = [
 ];
 
 // Access specific player
-console.log(players[0].name); // "Messi" he is the goat 
+console.log(players[0].name); // "Messi" - he is the goat 
 
 // Loop through array of objects
 players.forEach(player => {
@@ -482,9 +487,8 @@ const legends = players.filter(p => p.goals >= 500);
 console.log(legends);
 
 // Map - get only names
-const names = players.map(p => p.name);
-console.log(names); // ["Messi", "Ronaldo", "Neymar"]
-// hahahahahahahahaha
+const player_names = players.map(p => p.name);
+console.log(player_names); // ["Messi", "Ronaldo", "Neymar"]
 
 // Find - get specific player
 const messi = players.find(p => p.name === "Messi");
@@ -501,6 +505,10 @@ console.log(players);
 // Practical example - total goals
 const totalGoals = players.reduce((sum, player) => sum + player.goals, 0);
 console.log(`Total goals: ${totalGoals}`);
+
+// ===============================
+// END OF PRACTICE
+// ===============================
 
 // SAKYOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 
