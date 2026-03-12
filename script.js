@@ -470,7 +470,7 @@ const players = [
 ];
 
 // Access specific player
-console.log(players[0].name); // "Messi"
+console.log(players[0].name); // "Messi" he is the goat 
 
 // Loop through array of objects
 players.forEach(player => {
