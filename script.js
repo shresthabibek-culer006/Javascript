@@ -523,6 +523,18 @@ for (let i = 0; i < nums.length; i++) {
 
 console.log("Total:", sums); // 150
 
+// Find largest number in array
+const numss = [45, 23, 89, 12, 67];
+let max = numss[0];
+
+for (let i = 1; i < numss.length; i++) {
+    if (numss[i] > max) {
+        max = numss[i];
+    }
+}
+
+console.log("Largest:", max); // 89
+
 // ===============================
 // END OF PRACTICE
 // ===============================
