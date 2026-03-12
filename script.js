@@ -418,7 +418,27 @@ const player = {
 player.celebrate(); // "Messi celebrates!"
 
 
+// OBJECT METHODS
 
+const dav_student = {
+    name: "Bibek",
+    age: 20,
+    course: "Web Dev"
+};
+
+// Object.keys() - get all keys
+console.log(Object.keys(dav_student)); // ["name", "age", "course"]
+
+// Object.values() - get all values
+console.log(Object.values(dav_student)); // ["Bibek", 20, "Web Dev"]
+
+// Object.entries() - get key-value pairs
+console.log(Object.entries(dav_student));
+// [["name", "Bibek"], ["age", 20], ["course", "Web Dev"]]
+
+// Check if property exists
+console.log("name" in dav_student); // true
+console.log("salary" in dav_student); // false
 
 
 
