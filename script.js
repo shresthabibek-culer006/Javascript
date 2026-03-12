@@ -484,6 +484,7 @@ console.log(legends);
 // Map - get only names
 const names = players.map(p => p.name);
 console.log(names); // ["Messi", "Ronaldo", "Neymar"]
+// hahahahahahahahaha
 
 // Find - get specific player
 const messi = players.find(p => p.name === "Messi");
