@@ -367,7 +367,19 @@ const toppers = students.filter(student => student.marks >= 80);
 console.log(toppers);
 
 
+// OBJECTS
 
+// Creating object
+const person = {
+    name: "Bibek Shrestha",
+    age: 20,
+    city: "Kathmandu",
+    isStudent: true
+};
+
+// Access properties
+console.log(person.name);      // Dot notation
+console.log(person["age"]);    // Bracket notation
 
 
 
