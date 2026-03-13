@@ -585,6 +585,19 @@ function countVowels(str) {
 console.log(countVowels("hello world")); // 3
 console.log(countVowels("JavaScript")); // 3
 
+// Function to print multiplication table
+function multiplicationTable(num) {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${num} x ${i} = ${num * i}`);
+    }
+}
+
+multiplicationTable(5);
+// Output:
+// 5 x 1 = 5
+// 5 x 2 = 10
+// ... up to 5 x 10 = 50
+
 // ===============================
 // END OF PRACTICE
 // ===============================
