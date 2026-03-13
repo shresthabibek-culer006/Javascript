@@ -507,11 +507,12 @@ const totalGoals = players.reduce((sum, player) => sum + player.goals, 0);
 console.log(`Total goals: ${totalGoals}`);
 
 // Print array elements using for loop
-const colors = ["red", "blue", "green", "yellow"];
+const colors = ["red", "blue", "green", "yellow","orange"];
 
 for (let i = 0; i < colors.length; i++) {
     console.log(colors[i]);
 }
+
 
 // Sum all numbers in array
 const nums = [10, 20, 30, 40, 50];
@@ -544,6 +545,16 @@ for (let i = bucket_fruits.length - 1; i >= 0; i--) {
 }
 
 console.log(reversed); // ["orange", "mango", "banana", "apple"]
+
+
+// Function to print numbers 1 to n
+function printNumbers(n) {
+    for (let i = 1; i <= n; i++) {
+        console.log(i);
+    }
+}
+
+printNumbers(10); // Prints 1 to 10
 
 // ===============================
 // END OF PRACTICE
