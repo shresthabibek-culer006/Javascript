@@ -568,6 +568,23 @@ function factorial(num) {
 console.log(factorial(5)); // 120
 console.log(factorial(7)); // 5040
 
+// Function to count vowels in a string
+function countVowels(str) {
+    const vowels = "aeiouAEIOU";
+    let count = 0;
+    
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            count++;
+        }
+    }
+    
+    return count;
+}
+
+console.log(countVowels("hello world")); // 3
+console.log(countVowels("JavaScript")); // 3
+
 // ===============================
 // END OF PRACTICE
 // ===============================
