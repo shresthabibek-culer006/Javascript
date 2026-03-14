@@ -598,9 +598,24 @@ multiplicationTable(5);
 // 5 x 2 = 10
 // ... up to 5 x 10 = 50
 
+// Calculate shopping cart total
+const cart = [
+    {item: "T-shirt", price: 500},
+    {item: "Jeans", price: 1500},
+    {item: "Shoes", price: 2000}
+];
+
+const total = cart.reduce((sum, product) => sum + product.price, 0);
+console.log(`Total: Rs. ${total}`); // Total: Rs. 4000
+
+
+
+
+
+
 // ===============================
 // END OF PRACTICE
-// ===============================
+// ===============================  
 
 // SAKYOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 
