@@ -619,6 +619,14 @@ const activeUsers = users.filter(user => user.active);
 console.log(activeUsers);
 // [{name: "Bibek", active: true}, {name: "Shyam", active: true}]
 
+// Calculate age from birth year
+function calculateAge(birthYear) {
+    const currentYear = new Date().getFullYear();
+    return currentYear - birthYear;
+}
+
+console.log(calculateAge(2004)); // ~22
+console.log(calculateAge(2000)); // ~26
 
 
 
