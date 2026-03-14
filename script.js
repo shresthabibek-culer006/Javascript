@@ -608,7 +608,16 @@ const cart = [
 const total = cart.reduce((sum, product) => sum + product.price, 0);
 console.log(`Total: Rs. ${total}`); // Total: Rs. 4000
 
+// Get only active users
+const users = [
+    {name: "Bibek", active: true},
+    {name: "Ram", active: false},
+    {name: "Shyam", active: true}
+];
 
+const activeUsers = users.filter(user => user.active);
+console.log(activeUsers);
+// [{name: "Bibek", active: true}, {name: "Shyam", active: true}]
 
 
 
