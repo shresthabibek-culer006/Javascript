@@ -653,7 +653,7 @@ for (let i = 0; i < pcps_students.length; i++) {
 
 // Even Odd Checker
 
-const unique_numbers = [12, 7, 34, 19, 56, 3, 88, 45, 60, 21];
+const unique_numbers = [12, 7, 34, 19, 56, 3, 88, 45, 60, 21, 67, 3545,456];
 
 function checkNumber(num) {
   if (num % 2 === 0) {
