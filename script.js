@@ -721,6 +721,34 @@ for (let i = 0; i < passwords.length; i++) {
   console.log(`"${passwords[i]}" → ${strength}`);
 }
 
+// Shopping Cart
+
+const shopping_cart = [
+  { item: "Apple", price: 30, quantity: 4 },
+  { item: "Milk", price: 60, quantity: 2 },
+  { item: "Bread", price: 45, quantity: 1 },
+  { item: "Eggs", price: 120, quantity: 1 },
+];
+
+function getTotal(price, quantity) {
+  if (quantity >= 3) {
+    return price * quantity * 0.9; // 10% discount
+  } else {
+    return price * quantity;
+  }
+}
+
+let grandTotal = 0;
+
+for (let i = 0; i < shopping_cart.length; i++) {
+  const product = shopping_cart[i];
+  const total = getTotal(product.price, product.quantity);
+  grandTotal += total;
+  console.log(`${product.item} → Rs.${total}`);
+}
+
+console.log(`Grand Total: Rs.${grandTotal}`);
+
 // ===============================
 // END OF PRACTICE
 // ===============================
