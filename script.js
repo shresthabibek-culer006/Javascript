@@ -702,6 +702,25 @@ for (let i = 0; i < temperatures.length; i++) {
   console.log(`${temperatures[i]}°C → ${result.fahrenheit}°F → ${result.status}`);
 }
 
+// Password Strength Checker
+
+const passwords = ["abc", "hello123", "MyP@ss1", "SuperSecure@99!", "12345"];
+
+function checkStrength(password) {
+  if (password.length < 6) {
+    return "Weak";
+  } else if (password.length < 10) {
+    return "Medium";
+  } else if (password.length >= 10) {
+    return "Strong";
+  }
+}
+
+for (let i = 0; i < passwords.length; i++) {
+  const strength = checkStrength(passwords[i]);
+  console.log(`"${passwords[i]}" → ${strength}`);
+}
+
 // ===============================
 // END OF PRACTICE
 // ===============================
