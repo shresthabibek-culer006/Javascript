@@ -628,11 +628,9 @@ function calculateAge(birthYear) {
 console.log(calculateAge(2004)); // ~22
 console.log(calculateAge(2000)); // ~26
 
-
-
 // ===============================
 // END OF PRACTICE
-// ===============================  
+// ===============================
 
 // SAKYOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 
