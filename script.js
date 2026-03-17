@@ -681,6 +681,27 @@ for (let i = 0; i < numbs.length - 1; i++) {
   console.log("---");
 }
 
+// Temperature Converter
+
+const temperatures = [0, 25, 37, 100, -10];
+
+function convert(celsius) {
+  if (celsius < 0) {
+    return { status: "Freezing", fahrenheit: (celsius * 9/5) + 32 };
+  } else if (celsius < 20) {
+    return { status: "Cold", fahrenheit: (celsius * 9/5) + 32 };
+  } else if (celsius < 35) {
+    return { status: "Normal", fahrenheit: (celsius * 9/5) + 32 };
+  } else {
+    return { status: "Hot", fahrenheit: (celsius * 9/5) + 32 };
+  }
+}
+
+for (let i = 0; i < temperatures.length; i++) {
+  const result = convert(temperatures[i]);
+  console.log(`${temperatures[i]}°C → ${result.fahrenheit}°F → ${result.status}`);
+}
+
 // ===============================
 // END OF PRACTICE
 // ===============================
