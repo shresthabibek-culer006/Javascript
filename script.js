@@ -651,6 +651,35 @@ for (let i = 0; i < pcps_students.length; i++) {
   console.log(`${pcps_students.name} scored ${pcps_students.score} → Grade: ${grade}`);
 }
 
+// Simple Calculator
+
+const numbs = [10, 25, 37, 48, 55];
+
+function calculate(a, b, operator) {
+  if (operator === "add") {
+    return a + b;
+  } else if (operator === "subtract") {
+    return a - b;
+  } else if (operator === "multiply") {
+    return a * b;
+  } else if (operator === "divide") {
+    if (b === 0) {
+      return "Cannot divide by zero";
+    } else {
+      return a / b;
+    }
+  }
+}
+
+for (let i = 0; i < numbs.length - 1; i++) {
+  const a = numbs[i];
+  const b = numbs[i + 1];
+  console.log(`${a} + ${b} = ${calculate(a, b, "add")}`);
+  console.log(`${a} - ${b} = ${calculate(a, b, "subtract")}`);
+  console.log(`${a} * ${b} = ${calculate(a, b, "multiply")}`);
+  console.log(`${a} / ${b} = ${calculate(a, b, "divide")}`);
+  console.log("---");
+}
 
 // ===============================
 // END OF PRACTICE
