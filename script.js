@@ -780,6 +780,17 @@ console.log(getGrade(85));  // "A"
 console.log(getGrade(55));  // "D"
 console.log(getGrade(92));  // "A+"
 
+// Calculate discount price
+function applyDiscount(price, discountPercent) {
+    const discount = (price * discountPercent) / 100;
+    const finalPrice = price - discount;
+    return finalPrice;
+}
+
+console.log(applyDiscount(1000, 10));  // Rs. 900
+console.log(applyDiscount(2500, 20));  // Rs. 2000
+console.log(applyDiscount(5000, 15));  // Rs. 4250
+
 // ===============================
 // END OF PRACTICE
 // ===============================
