@@ -766,6 +766,20 @@ for (let i = 0; i < shopping_cart.length; i++) {
 
 console.log(`Grand Total: Rs.${grandTotal}`);
 
+// Calculate student grade
+function getGrade(marks) {
+    if (marks >= 90) return "A+";
+    if (marks >= 80) return "A";
+    if (marks >= 70) return "B";
+    if (marks >= 60) return "C";
+    if (marks >= 50) return "D";
+    return "F";
+}
+
+console.log(getGrade(85));  // "A"
+console.log(getGrade(55));  // "D"
+console.log(getGrade(92));  // "A+"
+
 // ===============================
 // END OF PRACTICE
 // ===============================
