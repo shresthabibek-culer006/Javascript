@@ -791,6 +791,15 @@ console.log(applyDiscount(1000, 10));  // Rs. 900
 console.log(applyDiscount(2500, 20));  // Rs. 2000
 console.log(applyDiscount(5000, 15));  // Rs. 4250
 
+// Simple email validator
+function isValidEmail(email) {
+    return email.includes("@") && email.includes(".");
+}
+
+console.log(isValidEmail("bibek@gmail.com"));  // true
+console.log(isValidEmail("invalid.com"));       // false
+console.log(isValidEmail("test@yahoo.com"));    // true
+
 // ===============================
 // END OF PRACTICE
 // ===============================
