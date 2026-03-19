@@ -809,6 +809,21 @@ console.log(celsiusToFahrenheit(0));   // 32°F
 console.log(celsiusToFahrenheit(25));  // 77°F
 console.log(celsiusToFahrenheit(100)); // 212°F
 
+// Search products by name
+const products = [
+    {name: "Laptop", price: 80000},
+    {name: "Phone", price: 30000},
+    {name: "Tablet", price: 45000}
+];
+
+function searchProduct(query) {
+    return products.filter(p => 
+        p.name.toLowerCase().includes(query.toLowerCase())
+    );
+}
+
+console.log(searchProduct("lap"));  // [{name: "Laptop", price: 80000}]
+
 // ===============================
 // END OF PRACTICE
 // ===============================
