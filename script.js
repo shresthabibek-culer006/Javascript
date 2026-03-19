@@ -825,13 +825,13 @@ function searchProduct(query) {
 console.log(searchProduct("lap"));  // [{name: "Laptop", price: 80000}]
 
 // Validate login credentials
-const users = [
+const userss = [
     {username: "bibek", password: "1234"},
     {username: "admin", password: "admin123"}
 ];
 
 function login(username, password) {
-    const user = users.find(u => 
+    const user = userss.find(u => 
         u.username === username && u.password === password
     );
     return user ? "Login successful!" : "Invalid credentials";
@@ -852,6 +852,17 @@ const completedCount = todos.filter(todo => todo.completed).length;
 const totalCount = todos.length;
 
 console.log(`Completed: ${completedCount}/${totalCount}`); // Completed: 3/4
+
+// Check password strength
+function checkPasswordStrength(password) {
+    if (password.length < 6) return "Weak";
+    if (password.length < 10) return "Medium";
+    return "Strong";
+}
+
+console.log(checkPasswordStrength("abc"));       // "Weak"
+console.log(checkPasswordStrength("password"));  // "Medium"
+console.log(checkPasswordStrength("SuperSecure2024!")); // "Strong"
 
 // ===============================
 // END OF PRACTICE
