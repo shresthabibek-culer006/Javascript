@@ -824,6 +824,22 @@ function searchProduct(query) {
 
 console.log(searchProduct("lap"));  // [{name: "Laptop", price: 80000}]
 
+// Validate login credentials
+const users = [
+    {username: "bibek", password: "1234"},
+    {username: "admin", password: "admin123"}
+];
+
+function login(username, password) {
+    const user = users.find(u => 
+        u.username === username && u.password === password
+    );
+    return user ? "Login successful!" : "Invalid credentials";
+}
+
+console.log(login("bibek", "1234"));    // "Login successful!"
+console.log(login("bibek", "wrong"));   // "Invalid credentials"
+
 // ===============================
 // END OF PRACTICE
 // ===============================
