@@ -840,6 +840,19 @@ function login(username, password) {
 console.log(login("bibek", "1234"));    // "Login successful!"
 console.log(login("bibek", "wrong"));   // "Invalid credentials"
 
+// Count completed todos
+const todos = [
+    {task: "Study JS", completed: true},
+    {task: "Exercise", completed: false},
+    {task: "Read book", completed: true},
+    {task: "Code project", completed: true}
+];
+
+const completedCount = todos.filter(todo => todo.completed).length;
+const totalCount = todos.length;
+
+console.log(`Completed: ${completedCount}/${totalCount}`); // Completed: 3/4
+
 // ===============================
 // END OF PRACTICE
 // ===============================
