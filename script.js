@@ -800,6 +800,15 @@ console.log(isValidEmail("bibek@gmail.com"));  // true
 console.log(isValidEmail("invalid.com"));       // false
 console.log(isValidEmail("test@yahoo.com"));    // true
 
+// Celsius to Fahrenheit converter
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+}
+
+console.log(celsiusToFahrenheit(0));   // 32°F
+console.log(celsiusToFahrenheit(25));  // 77°F
+console.log(celsiusToFahrenheit(100)); // 212°F
+
 // ===============================
 // END OF PRACTICE
 // ===============================
