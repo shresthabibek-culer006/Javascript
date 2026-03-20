@@ -925,6 +925,16 @@ function calculateTip(bill, tipPercent = 10) {
 console.log(calculateTip(1000, 15));  // {bill: 1000, tip: 150, total: 1150}
 console.log(calculateTip(500));       // {bill: 500, tip: 50, total: 550}
 
+// Generate username from name
+function generateUsername(firstName, lastName) {
+    const randomNum = Math.floor(Math.random() * 1000);
+    const username = `${firstName.toLowerCase()}_${lastName.toLowerCase()}${randomNum}`;
+    return username;
+}
+
+console.log(generateUsername("Bibek", "Shrestha"));  // "bibek_shrestha472"
+console.log(generateUsername("John", "Doe"));         // "john_doe831"
+
 // ===============================
 // END OF PRACTICE
 // ===============================
