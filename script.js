@@ -957,6 +957,21 @@ console.log(generateSlug("Hello World"));              // "hello-world"
 console.log(generateSlug("JavaScript is Amazing!"));   // "javascript-is-amazing"
 console.log(generateSlug("Learn Web Dev 2024"));       // "learn-web-dev-2024"
 
+// Find oldest person from array
+const people = [
+    {name: "Ram", age: 25},
+    {name: "Shyam", age: 30},
+    {name: "Hari", age: 22}
+];
+
+function findOldest(people) {
+    return people.reduce((oldest, person) => 
+        person.age > oldest.age ? person : oldest
+    );
+}
+
+console.log(findOldest(people));  // {name: "Shyam", age: 30}
+
 // ===============================
 // END OF PRACTICE
 // ===============================
