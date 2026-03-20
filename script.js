@@ -935,6 +935,15 @@ function generateUsername(firstName, lastName) {
 console.log(generateUsername("Bibek", "Shrestha"));  // "bibek_shrestha472"
 console.log(generateUsername("John", "Doe"));         // "john_doe831"
 
+// Calculate average of numbers
+function calculateAverage(numbers) {
+    const sum = numbers.reduce((total, num) => total + num, 0);
+    return sum / numbers.length;
+}
+
+console.log(calculateAverage([10, 20, 30, 40, 50]));  // 30
+console.log(calculateAverage([85, 90, 78, 92]));      // 86.25
+
 // Generate URL slug from title
 function generateSlug(title) {
     return title
