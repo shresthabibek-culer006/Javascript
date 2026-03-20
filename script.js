@@ -935,6 +935,19 @@ function generateUsername(firstName, lastName) {
 console.log(generateUsername("Bibek", "Shrestha"));  // "bibek_shrestha472"
 console.log(generateUsername("John", "Doe"));         // "john_doe831"
 
+// Generate URL slug from title
+function generateSlug(title) {
+    return title
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-');
+}
+
+console.log(generateSlug("Hello World"));              // "hello-world"
+console.log(generateSlug("JavaScript is Amazing!"));   // "javascript-is-amazing"
+console.log(generateSlug("Learn Web Dev 2024"));       // "learn-web-dev-2024"
+
 // ===============================
 // END OF PRACTICE
 // ===============================
