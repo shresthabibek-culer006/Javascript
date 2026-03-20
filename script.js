@@ -901,6 +901,16 @@ function formatPhone(number) {
 console.log(formatPhone("9841234567"));  // "+977 984-123-4567"
 console.log(formatPhone("9801111222"));  // "+977 980-111-1222"
 
+// Count words in a sentence
+function countWords(text) {
+    const words = text.trim().split(/\s+/);
+    return words.filter(word => word.length > 0).length;
+}
+
+console.log(countWords("Hello world"));                    // 2
+console.log(countWords("Learning JavaScript is fun"));     // 4
+console.log(countWords("   Multiple   spaces   here   ")); // 3
+
 // ===============================
 // END OF PRACTICE
 // ===============================
