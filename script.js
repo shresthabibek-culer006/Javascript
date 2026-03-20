@@ -890,6 +890,17 @@ function calculateBMI(weight, height) {
 console.log(calculateBMI(70, 1.75));  // BMI: 22.9 - Normal
 console.log(calculateBMI(90, 1.80));  // BMI: 27.8 - Overweight
 
+// Format phone number
+function formatPhone(number) {
+    // Input: "9841234567"
+    // Output: "+977 984-123-4567"
+    const clean = number.replace(/\D/g, "");
+    return `+977 ${clean.slice(0, 3)}-${clean.slice(3, 6)}-${clean.slice(6)}`;
+}
+
+console.log(formatPhone("9841234567"));  // "+977 984-123-4567"
+console.log(formatPhone("9801111222"));  // "+977 980-111-1222"
+
 // ===============================
 // END OF PRACTICE
 // ===============================
