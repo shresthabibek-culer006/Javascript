@@ -911,6 +911,20 @@ console.log(countWords("Hello world"));                    // 2
 console.log(countWords("Learning JavaScript is fun"));     // 4
 console.log(countWords("   Multiple   spaces   here   ")); // 3
 
+// Calculate restaurant tip
+function calculateTip(bill, tipPercent = 10) {
+    const tip = (bill * tipPercent) / 100;
+    const total = bill + tip;
+    return {
+        bill: bill,
+        tip: tip,
+        total: total
+    };
+}
+
+console.log(calculateTip(1000, 15));  // {bill: 1000, tip: 150, total: 1150}
+console.log(calculateTip(500));       // {bill: 500, tip: 50, total: 550}
+
 // ===============================
 // END OF PRACTICE
 // ===============================
