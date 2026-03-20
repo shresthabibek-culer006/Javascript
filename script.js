@@ -876,6 +876,20 @@ function generateOTP(length = 6) {
 console.log(generateOTP());     // e.g., "472859"
 console.log(generateOTP(4));    // e.g., "9283"
 
+// Calculate BMI (Body Mass Index)
+function calculateBMI(weight, height) {
+    // weight in kg, height in meters
+    const bmi = weight / (height * height);
+    
+    if (bmi < 18.5) return `BMI: ${bmi.toFixed(1)} - Underweight`;
+    if (bmi < 25) return `BMI: ${bmi.toFixed(1)} - Normal`;
+    if (bmi < 30) return `BMI: ${bmi.toFixed(1)} - Overweight`;
+    return `BMI: ${bmi.toFixed(1)} - Obese`;
+}
+
+console.log(calculateBMI(70, 1.75));  // BMI: 22.9 - Normal
+console.log(calculateBMI(90, 1.80));  // BMI: 27.8 - Overweight
+
 // ===============================
 // END OF PRACTICE
 // ===============================
