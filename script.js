@@ -1,18 +1,23 @@
 // ===============================
-// 1. VARIABLES (let, const)
+// 1. VARIABLES (let, const, var)
 // ===============================
 
+// const - Cannot be reassigned
 const PI = 3.14;
+console.log("PI Value is:", PI);
+
+// let - Can be reassigned
 let age = 19;
+console.log("Age:", age);
+age = age + 1; // or age += 1
+console.log("Updated Age:", age);
 
-console.log("Pie Value is : ", PI);
-console.log("Age : " , age);
-
-age = age += 1; // Reassign allowed in let variable
-console.log("Age : " , age);
+// var - Old way (avoid)
+// var is function scoped, not block scoped
 
 /*
-PI = 3.16; // Ressign  is not allowed in const variable because it is constable variable
+// This will throw error - const cannot be reassigned
+PI = 3.16; 
 console.log(PI);
 */
 
@@ -20,109 +25,147 @@ console.log(PI);
 // 2. DECLARATION & INITIALIZATION
 // ===============================
 
-let username; // Declaration
-username = "Bibek Shrestha"; // Initialization
+// Declaration only
+let username;
+console.log("Username (before):", username); // undefined
 
-let city = "Kathmandu" // Declaration and Initialization at a same time 
+// Initialization
+username = "Bibek Shrestha";
+console.log("Username (after):", username);
 
-console.log("Username : " , username);
-console.log("City : " , city);
-
+// Declaration + Initialization together
+let city = "Kathmandu";
+console.log("City:", city);
 
 // ===============================
-// 3. SCOPE
+// 3. SCOPE (Global, Block, Function)
 // ===============================
 
-let globalVar = "I'm a global Variable";
+// Global Scope - accessible everywhere
+let globalVar = "I'm a global variable";
 
-function scopeExample(){
-    var functionVar = "This is functional Variable";
-
-    if(true){
-      let blockVar = "This a blocked based Variable";
-      console.log(blockVar);
-    }
-
-    console.log(functionVar);
+function scopeExample() {
+  // Function Scope - accessible only inside function
+  var functionVar = "This is a functional variable";
+  
+  if (true) {
+    // Block Scope - accessible only inside { }
+    let blockVar = "This is a block-scoped variable";
+    console.log("Inside block:", blockVar);
+  }
+  
+  console.log("Inside function:", functionVar);
+  // console.log(blockVar); // ERROR! blockVar not accessible here
 }
 
 scopeExample();
-
-console.log(globalVar);
-/*
-console.log(blockVar); shows ERROR blockVar is not defined because blockVar is initialized inside the fucntion.
-*/
+console.log("Global:", globalVar);
+// console.log(blockVar); // ERROR! blockVar is not defined
 
 // ===============================
-// 4. HOISTING
+// 4. HOISTING & TDZ
 // ===============================
 
-// Hoisting means once the variable is initialized js automatically creates the declaration on the top of the memory.
-// TDZ = TEMPORAL DEAD ZONE means the time between hosting to initialization.
-
-console.log(mainCharacter); // undefined - hoisted 
+// var - Gets hoisted with undefined
+console.log(mainCharacter); // undefined (not an error)
 var mainCharacter = "Bibek";
+console.log(mainCharacter); // "Bibek"
 
+// let/const - Temporal Dead Zone (TDZ)
 /*
-
-console.log(playerName); // Error - TDZ 
+console.log(playerName); // ReferenceError! (TDZ)
 let playerName = "Shradiya";
 console.log(playerName);
-
 */
 
 // ===============================
 // 5. DATA TYPES
 // ===============================
 
-// Primitive Data Types 
+// ========== PRIMITIVE DATA TYPES ==========
+
+// String
 let writer = "MhrznSh";
+console.log("Writer:", writer, "Type:", typeof writer);
+
+// Number
 let writer_age = 17;
+console.log("Age:", writer_age, "Type:", typeof writer_age);
+
+// Boolean
 let does_she_has_a_good_handwriting = true;
+console.log("Good handwriting:", does_she_has_a_good_handwriting, "Type:", typeof does_she_has_a_good_handwriting);
+
+// Null
 let kiss = null;
-let Playscore = undefined;
+console.log("Kiss:", kiss, "Type:", typeof kiss); // "object" (JS bug!)
+
+// Undefined
+let playerScore = undefined;
+console.log("Score:", playerScore, "Type:", typeof playerScore);
+
+// BigInt
 let big_number = 12345678901234567890n;
+console.log("Big number:", big_number, "Type:", typeof big_number);
+
+// Symbol
 let player_id = Symbol("id");
+console.log("Player ID:", player_id, "Type:", typeof player_id);
 
+// ========== REFERENCE DATA TYPES ==========
 
-// Reference Data Types
+// Array
+const fruits = ["Pineapple", "Banana", "Mango", "Apple", "Kiwi", "Orange"];
+console.log("Fruits:", fruits, "Type:", typeof fruits); // "object"
 
-const fruits = ["Pineapple","Banana","Mango","Apple","Kiwi","Orange"];
-
+// Object
 const good_girl = {
-  girl_name : "Shradiya",
+  girl_name: "Shradiya",
   girl_age: 17
-}
+};
+console.log("Good girl:", good_girl, "Type:", typeof good_girl);
 
-function isSheMyBabe(){
+// Function
+function isSheMyBabe() {
   const her_name = "Shradiya Maharjan";
-  console.log(her_name,"! She is my Babyyyyyyy💋");
+  console.log(her_name, "! She is my Babyyyyyyy💋");
 }
-
 isSheMyBabe();
+console.log("Function type:", typeof isSheMyBabe);
 
 // ===============================
-// 7. TYPE COERCION
+// 6. TYPE COERCION
 // ===============================
 
-console.log(5+4); // 9 = it simply just do add
-console.log("5"+4); // 54 = it concatenates doesn't do the math
-console.log("5"-4); // 1 = it converts string to number because of - operator
-console.log("Shradiya"-4); // NaN = String - Number it's basically the failed Number Operation
+console.log("\n--- TYPE COERCION ---");
+
+// + operator (addition or concatenation)
+console.log(5 + 4);         // 9 (both numbers, addition)
+console.log("5" + 4);       // "54" (string + number = concatenation)
+
+// - operator (only math)
+console.log("5" - 4);       // 1 (string converted to number)
+console.log("Shradiya" - 4); // NaN (failed number operation)
 
 // ===============================
-// 8. == vs ===
+// 7. == vs === (COMPARISON)
 // ===============================
 
-console.log(5 == "5");   // true = checks the value only
-console.log(5 === "5");  // false = checks the type and the value 
+console.log("\n--- == vs === ---");
 
-console.log(0 == false); // 0 is false so false == flase it true
-console.log(0 === false); // 0 is a number and false is a boolean so it's false
+// == (loose equality - allows type coercion)
+console.log(5 == "5");      // true (converts "5" to 5)
+console.log(0 == false);    // true (both falsy)
+
+// === (strict equality - checks type AND value)
+console.log(5 === "5");     // false (different types)
+console.log(0 === false);   // false (number vs boolean)
 
 // ===============================
-// 9. TRUTHY & FALSY
+// 8. TRUTHY & FALSY VALUES
 // ===============================
+
+console.log("\n--- TRUTHY & FALSY ---");
 
 let value = "";
 
@@ -132,101 +175,31 @@ if (value) {
   console.log("Falsy value detected");
 }
 
-// Falsy Value = false , "" , 0 , undefined , null , Nan , document.All
-// Truthy Valur = true , 1 and everything are truthy except the falsy values.
+// Falsy values: false, 0, "", null, undefined, NaN, document.all
+// Truthy values: Everything else!
 
 // ===============================
-// 10. FUNCTION EXAMPLE
+// 9. OPERATORS
 // ===============================
 
-function allowToVote(){
-  let voter_name = "Haku Maicha";
-  let voter_age = 17; 
-
-  if (voter_age >= 18){
-    console.log("You are allowed to vote for a ghanti 🔔")
-  }else{
-    console.log("You are not allowed to vote for a ghanti 🔔")
-  }
-}
-
-console.log(allowToVote());
-
-// ===============================
-// 11. OBJECT + ARRAY PRACTICE
-// ===============================
-
-const student = {
-  student_name : "Shradiya",
-  student_age : 17,
-  skills : ["HTML","CSS","JAVASCRIPT"]
-}
-
-console.log(student.student_name);
-console.log(student.skills[1]);
-
-// ===============================
-// 12. LOOP PRACTICE
-// ===============================
-
-for(let i = 0 ; i <= 5 ; i++){
-  console.log("Number : ",i);
-}
-
-// ===============================
-// 13. NaN Example
-// ===============================
-
-let result = 2 * "text";
-console.log(result);        // NaN
-console.log(typeof result); // number
-
-
-// =====================================
-// 14. ARROW FUNCTIONS
-// =====================================
-
-const cube = num => {
-  return num * num * num
-}
-
-console.log(cube(7));
-
-
-const greatestAmongThree = (a, b, c) => {
-  if (a > b && a > c) {
-    return "A is the Greatest Among All";
-  } 
-  else if (b > a && b > c) {
-    return "B is the Greatest Among All";
-  } 
-  else if (c > a && c > b) {
-    return "C is the Greatest Among All";
-  } 
-  else {
-    return "Some values are equal";
-  }
-};
-
-console.log(greatestAmongThree(34,56,45));
-
+console.log("\n--- OPERATORS ---");
 
 // ========== ARITHMETIC OPERATORS ==========
 let a = 10, b = 3;
-console.log(a + b);  // 13
-console.log(a - b);  // 7
-console.log(a * b);  // 30
-console.log(a / b);  // 3.333
-console.log(a % b);  // 1 (remainder)
-console.log(a ** b); // 1000 (10^3)
+console.log("a + b =", a + b);   // 13
+console.log("a - b =", a - b);   // 7
+console.log("a * b =", a * b);   // 30
+console.log("a / b =", a / b);   // 3.333...
+console.log("a % b =", a % b);   // 1 (remainder)
+console.log("a ** b =", a ** b); // 1000 (10^3)
 
 // ========== COMPARISON OPERATORS ==========
-console.log(5 == "5");   // true (loose)
-console.log(5 === "5");  // false (strict) 
-console.log(10 > 5);     // true
-console.log(10 <= 10);   // true
-console.log(5 != "5");   // false
-console.log(5 !== "5");  // true
+console.log(5 == "5");    // true (loose)
+console.log(5 === "5");   // false (strict)
+console.log(10 > 5);      // true
+console.log(10 <= 10);    // true
+console.log(5 != "5");    // false
+console.log(5 !== "5");   // true
 
 // ========== LOGICAL OPERATORS ==========
 console.log(true && false);  // false (AND)
@@ -239,1074 +212,145 @@ x += 5;  // x = 15
 x -= 3;  // x = 12
 x *= 2;  // x = 24
 x /= 4;  // x = 6
+console.log("Final x:", x);
 
 // ========== INCREMENT/DECREMENT ==========
 let count = 5;
-count++;  // 6 (post-increment)
-++count;  // 7 (pre-increment)
-count--;  // 6 (post-decrement)
+count++;   // 6 (post-increment)
+++count;   // 7 (pre-increment)
+count--;   // 6 (post-decrement)
+console.log("Count:", count);
 
-// ========== IF - ELSE ==========
+// ===============================
+// 10. CONTROL FLOW (if-else)
+// ===============================
 
-// Multiple conditions
+console.log("\n--- IF-ELSE ---");
+
+// Multiple conditions with && (AND)
 let player_username = "bibek";
 let password = "1234";
+
 if (player_username === "bibek" && password === "1234") {
-    console.log("Login successful");
+  console.log("Login successful");
 } else {
-    console.log("Invalid");
+  console.log("Invalid credentials");
 }
 
-// ========== TERNARY OPERATOR ==========
-// Nested ternary
+// Voting eligibility example
+function allowToVote() {
+  let voter_name = "Haku Maicha";
+  let voter_age = 17;
+  
+  if (voter_age >= 18) {
+    console.log("You are allowed to vote for a ghanti 🔔");
+  } else {
+    console.log("You are not allowed to vote for a ghanti 🔔");
+  }
+}
+
+allowToVote();
+
+// ===============================
+// 11. TERNARY OPERATOR
+// ===============================
+
+console.log("\n--- TERNARY OPERATOR ---");
+
+// Simple ternary
 let num = 0;
 let sign = num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
-console.log(sign); // "Zero"
+console.log("Sign:", sign); // "Zero"
 
+// Grade system using ternary
 let player_score = 88;
-let grade = player_score >= 90 ? "A" : player_score >= 70 ? "B" : player_score >= 50 ? "C" : "Fail";
+let grade = player_score >= 90 ? "A" : 
+            player_score >= 70 ? "B" : 
+            player_score >= 50 ? "C" : "Fail";
+console.log("Grade:", grade); // "B"
 
-console.log(grade); // B
-
+// Player status
 let player_points = 100;
+let player_status = player_points >= 100 ? "Gold" : 
+                    player_points >= 50 ? "Silver" : 
+                    player_points < 50 ? "Bronze" : "Invalid";
+console.log("Player Status:", player_status); // "Gold"
 
-let player_status = player_points >= 100 ? "Gold" : player_points >= 50 ? "Silver" : player_points < 50 ? "Bronze" : "Invalid Output";
-console.log(player_status);
+// ===============================
+// 12. FUNCTIONS
+// ===============================
 
+console.log("\n--- FUNCTIONS ---");
 
-
-
-
-
-// ========== ARRAYS ==========
-
-// Creating arrays
-let her_fruits = ["apple", "banana", "mango"];
-let numbers = [1, 2, 3, 4, 5];
-let mixed = [1, "hello", true, null];
-
-// Access elements
-console.log(her_fruits[0]); // "apple"
-console.log(her_fruits[2]); // "mango"
-
-// Array length
-console.log(her_fruits.length); // 3
-
-// Add elements
-her_fruits.push("orange");     // Add to end
-her_fruits.unshift("grapes");  // Add to start
-console.log(her_fruits); // ["grapes", "apple", "banana", "mango", "orange"]
-
-// Remove elements
-her_fruits.pop();      // Remove from end
-her_fruits.shift();    // Remove from start
-console.log(her_fruits); // ["apple", "banana", "mango"]
-
-// Check if element exists
-console.log(her_fruits.includes("apple")); // true
-console.log(her_fruits.includes("litchi")); // false
-console.log(her_fruits.indexOf("banana"));   // 1
-
-// Join array to string
-console.log(her_fruits.join(", ")); // "apple, banana, mango"
-
-// Slice (extract part)
-let some = her_fruits.slice(0, 2);
-console.log(some); // ["apple", "banana"]
-
-// ========== FUNCTIONS ==========
-
-// Function Declaration
-function greet() {
-    console.log("Hello!");
-}
-greet(); // Call function
-
-// Function with parameters
-function sayHello(name) {
-    console.log(`Hello, ${name}!`);
-}
-sayHello("Bibek"); // "Hello, Bibek!"
-
-// Function with return
-function addNumbers(a, b) {
-    return a + b;
-}
-let sum = addNumbers(5, 3);
-console.log(sum); // 8
-
-// Default parameters
-function greetUser(name = "Guest") {
-    console.log(`Welcome, ${name}!`);
-}
-greetUser();          // "Welcome, Guest!"
-greetUser("Bibek");   // "Welcome, Bibek!"
-
-// ========== ARROW FUNCTIONS ==========
-
-// Arrow function with return
-const addArrow = (a, b) => {
-    return a + b;
-}
-console.log(addArrow(34, 545)); // 579
-
-// Shorthand (implicit return)
-const addShort = (a, b) => a + b;
-console.log(addShort(10, 20)); // 30
-
-// Single parameter (no parentheses needed)
-const square = num => num * num;
-console.log(square(5)); // 25
-
-// ========== ARROW FUNCTIONS WITH ARRAY METHODS ==========
-const new_numbers = [1, 2, 3, 4, 5];
-
-// Map - double each number
-const numbers_doubled = new_numbers.map(num => num * 2);
-console.log(numbers_doubled); // [2, 4, 6, 8, 10]
-
-// Filter - get even numbers
-const numbers_evens = new_numbers.filter(num => num % 2 === 0);
-console.log(numbers_evens); // [2, 4]
-
-// Reduce - sum all numbers
-const numbers_sum = new_numbers.reduce((total, num) => total + num, 0);
-console.log(numbers_sum); // 15
-
-// ========== PRACTICAL EXAMPLE ==========
-const students = [
-    {name: "Bibek", marks: 85},
-    {name: "Shradiya", marks: 92},
-    {name: "Haku", marks: 78}
-];
-
-const toppers = students.filter(student => student.marks >= 80);
-console.log(toppers);
-
-// ========== OBJECTS ==========
-
-// Creating object
-const person = {
-    name: "Bibek Shrestha",
-    age: 20,
-    city: "Kathmandu",
-    isStudent: true
+// Arrow Function - Simple
+const cube = num => {
+  return num * num * num;
 };
+console.log("Cube of 7:", cube(7));
 
-// Access properties
-console.log(person.name);      // Dot notation
-console.log(person["age"]);    // Bracket notation
-
-// Modify properties
-person.age = 21;
-person.city = "Pokhara";
-console.log(person);
-
-// Add new property
-person.country = "Nepal";
-console.log(person);
-
-// Delete property
-delete person.isStudent;
-console.log(person);
-
-// ========== NESTED OBJECTS ==========
-const user = {
-    name: "Bibek",
-    address: {
-        city: "Lalitpur, Sundhara",
-        street: "Thamel",
-        zip: 44600
-    }
-};
-console.log(user.address.city); // "Lalitpur, Sundhara" 
-
-// ========== OBJECT WITH METHODS ==========
-const player = {
-    name: "Messi",
-    goals: 700,
-    celebrate: function() {
-        console.log(`${this.name} celebrates!`);
-    }
-};
-player.celebrate(); // "Messi celebrates!"
-
-// ========== OBJECT METHODS ==========
-
-const dav_student = {
-    name: "Shradiya",
-    age: 17,
-    course: "Web Dev"
-};
-
-// Object.keys() - get all keys
-console.log(Object.keys(dav_student)); // ["name", "age", "course"]
-
-// Object.values() - get all values
-console.log(Object.values(dav_student)); // ["Shradiya", 17, "Web Dev"]
-
-// Object.entries() - get key-value pairs
-console.log(Object.entries(dav_student));
-// [["name", "Shradiya"], ["age", 17], ["course", "Web Dev"]]
-
-// Check if property exists
-console.log("name" in dav_student); // true
-console.log("salary" in dav_student); // false
-
-// Copy object (shallow copy)
-const studentCopy = {...dav_student};
-studentCopy.age = 21;
-console.log(dav_student.age);     // 17 (original unchanged)
-console.log(studentCopy.age);     // 21
-
-// ========== MERGE OBJECTS ==========
-const basic = {name: "Bibek", age: 20};
-const extra = {city: "Kathmandu", country: "Nepal"};
-const merged = {...basic, ...extra};
-console.log(merged);
-// {name: "Bibek", age: 20, city: "Kathmandu", country: "Nepal"}
-
-// ========== OBJECT DESTRUCTURING ==========
-const student_data = {
-    his_name: "Bibek",
-    his_age: 20,
-    his_course: "Web Dev"
-};
-
-const {his_name, his_age, his_course} = student_data;
-console.log(his_name);   // "Bibek"
-console.log(his_age);    // 20
-console.log(his_course); // "Web Dev"
-
-// ========== ARRAY OF OBJECTS (Real World) ==========
-
-const players = [
-    {name: "Messi", goals: 700, team: "Barcelona"},
-    {name: "Ronaldo", goals: 850, team: "Al Nassr"},
-    {name: "Neymar", goals: 400, team: "Al Hilal"}
-];
-
-// Access specific player
-console.log(players[0].name); // "Messi" - he is the goat 
-
-// Loop through array of objects
-players.forEach(player => {
-    console.log(`${player.name} scored ${player.goals} goals`);
-});
-
-// Filter - find players with 500+ goals
-const legends = players.filter(p => p.goals >= 500);
-console.log(legends);
-
-// Map - get only names
-const player_names = players.map(p => p.name);
-console.log(player_names); // ["Messi", "Ronaldo", "Neymar"]
-
-// Find - get specific player
-const messi = players.find(p => p.name === "Messi");
-console.log(messi);
-
-// Sort by goals (descending)
-const sorted = [...players].sort((a, b) => b.goals - a.goals);
-console.log(sorted);
-
-// Add new player
-players.push({name: "Haaland", goals: 250, team: "Man City"});
-console.log(players);
-
-// Practical example - total goals
-const totalGoals = players.reduce((sum, player) => sum + player.goals, 0);
-console.log(`Total goals: ${totalGoals}`);
-
-// Print array elements using for loop
-const colors = ["red", "blue", "green", "yellow","orange"];
-
-for (let i = 0; i < colors.length; i++) {
-    console.log(colors[i]);
-}
-
-
-// Sum all numbers in array
-const nums = [10, 20, 30, 40, 50];
-let sums = 0;
-
-for (let i = 0; i < nums.length; i++) {
-    sums += nums[i];
-}
-
-console.log("Total:", sums); // 150
-
-// Find largest number in array
-const numss = [45, 23, 89, 12, 67];
-let max = numss[0];
-
-for (let i = 1; i < numss.length; i++) {
-    if (numss[i] > max) {
-        max = numss[i];
-    }
-}
-
-console.log("Largest:", max); // 89
-
-// Reverse array using loop
-const bucket_fruits = ["apple", "banana", "mango", "orange"];
-let reversed = [];
-
-for (let i = bucket_fruits.length - 1; i >= 0; i--) {
-    reversed.push(bucket_fruits[i]);
-}
-
-console.log(reversed); // ["orange", "mango", "banana", "apple"]
-
-
-// Function to print numbers 1 to n
-function printNumbers(n) {
-    for (let i = 1; i <= n; i++) {
-        console.log(i);
-    }
-}
-
-printNumbers(10); // Prints 1 to 10
-
-// Function to calculate factorial
-function factorial(num) {
-    let result = 1;
-    for (let i = 1; i <= num; i++) {
-        result *= i;
-    }
-    return result;
-}
-
-console.log(factorial(5)); // 120
-console.log(factorial(7)); // 5040
-
-// Function to count vowels in a string
-function countVowels(str) {
-    const vowels = "aeiouAEIOU";
-    let count = 0;
-    
-    for (let i = 0; i < str.length; i++) {
-        if (vowels.includes(str[i])) {
-            count++;
-        }
-    }
-    
-    return count;
-}
-
-console.log(countVowels("hello world")); // 3
-console.log(countVowels("JavaScript")); // 3
-
-// Function to print multiplication table
-function multiplicationTable(num) {
-    for (let i = 1; i <= 10; i++) {
-        console.log(`${num} x ${i} = ${num * i}`);
-    }
-}
-
-multiplicationTable(5);
-// Output:
-// 5 x 1 = 5
-// 5 x 2 = 10
-// ... up to 5 x 10 = 50
-
-// Calculate shopping cart total
-const cart = [
-    {item: "T-shirt", price: 500},
-    {item: "Jeans", price: 1500},
-    {item: "Shoes", price: 2000}
-];
-
-const total = cart.reduce((sum, product) => sum + product.price, 0);
-console.log(`Total: Rs. ${total}`); // Total: Rs. 4000
-
-// Get only active users
-const users = [
-    {name: "Bibek", active: true},
-    {name: "Ram", active: false},
-    {name: "Shyam", active: true}
-];
-
-const activeUsers = users.filter(user => user.active);
-console.log(activeUsers);
-// [{name: "Bibek", active: true}, {name: "Shyam", active: true}]
-
-// Calculate age from birth year
-function calculateAge(birthYear) {
-    const currentYear = new Date().getFullYear();
-    return currentYear - birthYear;
-}
-
-console.log(calculateAge(2004)); // ~22
-console.log(calculateAge(2000)); // ~26
-
-const pcps_students = [
-  { name: "Alice", score: 92 },
-  { name: "Bob Marlie", score: 25 },
-  { name: "Nina", score: 73 },
-  { name: "Diana", score: 58 },
-  { name: "Eve", score: 88 },
-];
-
-function getGrade(score) {
-  if (score >= 90) {
-    return "A";
-  } else if (score >= 75) {
-    return "B";
-  } else if (score >= 60) {
-    return "C";
+// Arrow Function - Complex logic
+const greatestAmongThree = (a, b, c) => {
+  if (a > b && a > c) {
+    return "A is the Greatest Among All";
+  } else if (b > a && b > c) {
+    return "B is the Greatest Among All";
+  } else if (c > a && c > b) {
+    return "C is the Greatest Among All";
   } else {
-    return "Fail";
+    return "Some values are equal";
   }
+};
+console.log(greatestAmongThree(34, 56, 45));
+
+// Grade calculator function
+const getGrade = score => {
+  if (score <= 32) return "Fail";
+  else if (score >= 33 && score <= 59) return "D";
+  else if (score >= 60 && score <= 69) return "C";
+  else if (score >= 70 && score <= 79) return "B";
+  else if (score >= 80 && score <= 89) return "A";
+  else if (score >= 90 && score <= 100) return "A+";
+  else return "Invalid Score";
+};
+console.log("Grade for 18:", getGrade(18)); // "Fail"
+
+// ===============================
+// 13. OBJECTS & ARRAYS
+// ===============================
+
+console.log("\n--- OBJECTS & ARRAYS ---");
+
+const student = {
+  student_name: "Shradiya",
+  student_age: 17,
+  skills: ["HTML", "CSS", "JAVASCRIPT"]
+};
+
+// Accessing object properties
+console.log("Student name:", student.student_name);
+console.log("Second skill:", student.skills[1]); // "CSS"
+
+// ===============================
+// 14. LOOPS
+// ===============================
+
+console.log("\n--- LOOPS ---");
+
+// For loop
+for (let i = 0; i <= 5; i++) {
+  console.log("Number:", i);
 }
 
-for (let i = 0; i < pcps_students.length; i++) {
-  const pcps_students = pcps_students[i];
-  const grade = getGrade(pcps_students.score);
-  console.log(`${pcps_students.name} scored ${pcps_students.score} → Grade: ${grade}`);
-}
+// ===============================
+// 15. NaN EXAMPLE
+// ===============================
 
-// Even Odd Checker
+console.log("\n--- NaN EXAMPLE ---");
 
-const unique_numbers = [12, 7, 34, 19, 56, 3, 88, 45, 60, 21, 67, 3545,456];
-
-function checkNumber(num) {
-  if (num % 2 === 0) {
-    return { number: num, type: "Even", category: num > 50 ? "Big" : "Small" };
-  } else {
-    return { number: num, type: "Odd", category: num > 50 ? "Big" : "Small" };
-  }
-}
-
-for (let i = 0; i < unique_numbers.length; i++) {
-  const result = checkNumber(unique_numbers[i]);
-  console.log(`${result.unique_numbers} → ${result.type} → ${result.category}`);
-}
-
-// Simple Calculator
-
-const numbs = [10, 25, 37, 48, 55];
-
-function calculate(a, b, operator) {
-  if (operator === "add") {
-    return a + b;
-  } else if (operator === "subtract") {
-    return a - b;
-  } else if (operator === "multiply") {
-    return a * b;
-  } else if (operator === "divide") {
-    if (b === 0) {
-      return "Cannot divide by zero";
-    } else {
-      return a / b;
-    }
-  }
-}
-
-for (let i = 0; i < numbs.length - 1; i++) {
-  const a = numbs[i];
-  const b = numbs[i + 1];
-  console.log(`${a} + ${b} = ${calculate(a, b, "add")}`);
-  console.log(`${a} - ${b} = ${calculate(a, b, "subtract")}`);
-  console.log(`${a} * ${b} = ${calculate(a, b, "multiply")}`);
-  console.log(`${a} / ${b} = ${calculate(a, b, "divide")}`);
-  console.log("---");
-}
-
-// Temperature Converter
-
-const temperatures = [0, 25, 37, 100, -10];
-
-function convert(celsius) {
-  if (celsius < 0) {
-    return { status: "Freezing", fahrenheit: (celsius * 9/5) + 32 };
-  } else if (celsius < 20) {
-    return { status: "Cold", fahrenheit: (celsius * 9/5) + 32 };
-  } else if (celsius < 35) {
-    return { status: "Normal", fahrenheit: (celsius * 9/5) + 32 };
-  } else {
-    return { status: "Hot", fahrenheit: (celsius * 9/5) + 32 };
-  }
-}
-
-for (let i = 0; i < temperatures.length; i++) {
-  const result = convert(temperatures[i]);
-  console.log(`${temperatures[i]}°C → ${result.fahrenheit}°F → ${result.status}`);
-}
-
-// Password Strength Checker
-
-const passwords = ["abc", "hello123", "MyP@ss1", "SuperSecure@99!", "12345"];
-
-function checkStrength(password) {
-  if (password.length < 6) {
-    return "Weak";
-  } else if (password.length < 10) {
-    return "Medium";
-  } else if (password.length >= 10) {
-    return "Strong";
-  }
-}
-
-for (let i = 0; i < passwords.length; i++) {
-  const strength = checkStrength(passwords[i]);
-  console.log(`"${passwords[i]}" → ${strength}`);
-}
-
-// Shopping Cart
-
-const shopping_cart = [
-  { item: "Apple", price: 30, quantity: 4 },
-  { item: "Milk", price: 60, quantity: 2 },
-  { item: "Bread", price: 45, quantity: 1 },
-  { item: "Eggs", price: 120, quantity: 1 },
-];
-
-function getTotal(price, quantity) {
-  if (quantity >= 3) {
-    return price * quantity * 0.9; // 10% discount
-  } else {
-    return price * quantity;
-  }
-}
-
-let grandTotal = 0;
-
-for (let i = 0; i < shopping_cart.length; i++) {
-  const product = shopping_cart[i];
-  const total = getTotal(product.price, product.quantity);
-  grandTotal += total;
-  console.log(`${product.item} → Rs.${total}`);
-}
-
-console.log(`Grand Total: Rs.${grandTotal}`);
-
-// Calculate student grade
-function getGrade(marks) {
-    if (marks >= 90) return "A+";
-    if (marks >= 80) return "A";
-    if (marks >= 70) return "B";
-    if (marks >= 60) return "C";
-    if (marks >= 50) return "D";
-    return "F";
-}
-
-console.log(getGrade(85));  // "A"
-console.log(getGrade(55));  // "D"
-console.log(getGrade(92));  // "A+"
-
-// Calculate discount price
-function applyDiscount(price, discountPercent) {
-    const discount = (price * discountPercent) / 100;
-    const finalPrice = price - discount;
-    return finalPrice;
-}
-
-console.log(applyDiscount(1000, 10));  // Rs. 900
-console.log(applyDiscount(2500, 20));  // Rs. 2000
-console.log(applyDiscount(5000, 15));  // Rs. 4250
-
-// Simple email validator
-function isValidEmail(email) {
-    return email.includes("@") && email.includes(".");
-}
-
-console.log(isValidEmail("bibek@gmail.com"));  // true
-console.log(isValidEmail("invalid.com"));       // false
-console.log(isValidEmail("test@yahoo.com"));    // true
-
-// Celsius to Fahrenheit converter
-function celsiusToFahrenheit(celsius) {
-    return (celsius * 9/5) + 32;
-}
-
-console.log(celsiusToFahrenheit(0));   // 32°F
-console.log(celsiusToFahrenheit(25));  // 77°F
-console.log(celsiusToFahrenheit(100)); // 212°F
-
-// Search products by name
-const products = [
-    {name: "Laptop", price: 80000},
-    {name: "Phone", price: 30000},
-    {name: "Tablet", price: 45000}
-];
-
-function searchProduct(query) {
-    return products.filter(p => 
-        p.name.toLowerCase().includes(query.toLowerCase())
-    );
-}
-
-console.log(searchProduct("lap"));  // [{name: "Laptop", price: 80000}]
-
-// Validate login credentials
-const userss = [
-    {username: "bibek", password: "1234"},
-    {username: "admin", password: "admin123"}
-];
-
-function login(username, password) {
-    const user = userss.find(u => 
-        u.username === username && u.password === password
-    );
-    return user ? "Login successful!" : "Invalid credentials";
-}
-
-console.log(login("bibek", "1234"));    // "Login successful!"
-console.log(login("bibek", "wrong"));   // "Invalid credentials"
-
-// Count completed todos
-const todos = [
-    {task: "Study JS", completed: true},
-    {task: "Exercise", completed: false},
-    {task: "Read book", completed: true},
-    {task: "Code project", completed: true}
-];
-
-const completedCount = todos.filter(todo => todo.completed).length;
-const totalCount = todos.length;
-
-console.log(`Completed: ${completedCount}/${totalCount}`); // Completed: 3/4
-
-// Check password strength
-function checkPasswordStrength(password) {
-    if (password.length < 6) return "Weak";
-    if (password.length < 10) return "Medium";
-    return "Strong";
-}
-
-console.log(checkPasswordStrength("abc"));       // "Weak"
-console.log(checkPasswordStrength("password"));  // "Medium"
-console.log(checkPasswordStrength("SuperSecure2024!")); // "Strong"
-
-// Generate random OTP
-function generateOTP(length = 6) {
-    let otp = "";
-    for (let i = 0; i < length; i++) {
-        otp += Math.floor(Math.random() * 10);
-    }
-    return otp;
-}
-
-console.log(generateOTP());     // e.g., "472859"
-console.log(generateOTP(4));    // e.g., "9283"
-
-// Calculate BMI (Body Mass Index)
-function calculateBMI(weight, height) {
-    // weight in kg, height in meters
-    const bmi = weight / (height * height);
-    
-    if (bmi < 18.5) return `BMI: ${bmi.toFixed(1)} - Underweight`;
-    if (bmi < 25) return `BMI: ${bmi.toFixed(1)} - Normal`;
-    if (bmi < 30) return `BMI: ${bmi.toFixed(1)} - Overweight`;
-    return `BMI: ${bmi.toFixed(1)} - Obese`;
-}
-
-console.log(calculateBMI(70, 1.75));  // BMI: 22.9 - Normal
-console.log(calculateBMI(90, 1.80));  // BMI: 27.8 - Overweight
-
-// Format phone number
-function formatPhone(number) {
-    // Input: "9841234567"
-    // Output: "+977 984-123-4567"
-    const clean = number.replace(/\D/g, "");
-    return `+977 ${clean.slice(0, 3)}-${clean.slice(3, 6)}-${clean.slice(6)}`;
-}
-
-console.log(formatPhone("9841234567"));  // "+977 984-123-4567"
-console.log(formatPhone("9801111222"));  // "+977 980-111-1222"
-
-// Count words in a sentence
-function countWords(text) {
-    const words = text.trim().split(/\s+/);
-    return words.filter(word => word.length > 0).length;
-}
-
-console.log(countWords("Hello world"));                    // 2
-console.log(countWords("Learning JavaScript is fun"));     // 4
-console.log(countWords("   Multiple   spaces   here   ")); // 3
-
-// Calculate restaurant tip
-function calculateTip(bill, tipPercent = 10) {
-    const tip = (bill * tipPercent) / 100;
-    const total = bill + tip;
-    return {
-        bill: bill,
-        tip: tip,
-        total: total
-    };
-}
-
-console.log(calculateTip(1000, 15));  // {bill: 1000, tip: 150, total: 1150}
-console.log(calculateTip(500));       // {bill: 500, tip: 50, total: 550}
-
-// Generate username from name
-function generateUsername(firstName, lastName) {
-    const randomNum = Math.floor(Math.random() * 1000);
-    const username = `${firstName.toLowerCase()}_${lastName.toLowerCase()}${randomNum}`;
-    return username;
-}
-
-console.log(generateUsername("Bibek", "Shrestha"));  // "bibek_shrestha472"
-console.log(generateUsername("John", "Doe"));         // "john_doe831"
-
-// Calculate average of numbers
-function calculateAverage(numbers) {
-    const sum = numbers.reduce((total, num) => total + num, 0);
-    return sum / numbers.length;
-}
-
-console.log(calculateAverage([10, 20, 30, 40, 50]));  // 30
-console.log(calculateAverage([85, 90, 78, 92]));      // 86.25
-
-// Generate URL slug from title
-function generateSlug(title) {
-    return title
-        .toLowerCase()
-        .trim()
-        .replace(/[^\w\s-]/g, '')
-        .replace(/\s+/g, '-');
-}
-
-console.log(generateSlug("Hello World"));              // "hello-world"
-console.log(generateSlug("JavaScript is Amazing!"));   // "javascript-is-amazing"
-console.log(generateSlug("Learn Web Dev 2024"));       // "learn-web-dev-2024"
-
-// Find oldest person from array
-const people = [
-    {name: "Ram", age: 25},
-    {name: "Shyam", age: 30},
-    {name: "Hari", age: 22}
-];
-
-function findOldest(people) {
-    return people.reduce((oldest, person) => 
-        person.age > oldest.age ? person : oldest
-    );
-}
-
-console.log(findOldest(people));  // {name: "Shyam", age: 30}
-
-// Remove duplicate values from array
-function removeDuplicates(arr) {
-    return [...new Set(arr)];
-}
-
-console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));  // [1, 2, 3, 4, 5]
-console.log(removeDuplicates(["a", "b", "a", "c"]));   // ["a", "b", "c"]
+let result = 2 * "text";
+console.log("Result:", result);        // NaN
+console.log("Type:", typeof result);   // "number" (failed number operation)
 
 // ===============================
 // END OF PRACTICE
 // ===============================
-
-// SAKYOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// -------------------------- DIFFERENT ADVANCE SESSION PRACITCE ----------------------------------
-
-// ===============================
-// JAVASCRIPT PRACTICE SESSION
-// ===============================
-
-// Practicing core JS concepts: string manipulation, array methods,
-// built-in functions, and ES6 features like arrow functions and spread operator
-// ===============================
-
-// STRING MANIPULATION: Reverse a string
-// Using split() to convert string to array, reverse() to flip it, join() to make it string again
-function reverseString(str) {
-    return str.split('').reverse().join('');
-}
-console.log(reverseString("shradiya")); // Output: "ayidarhs"
-
-// ===============================
-
-// PALINDROME CHECKER: Check if word reads same forwards and backwards
-// Palindrome = word that's same when reversed (e.g., "mom", "racecar")
-function isPalindrome(str) {
-    const reversed = str.split('').reverse().join('');
-    return str === reversed;
-}
-console.log(isPalindrome("mom")); // true
-console.log(isPalindrome("hello")); // false
-
-// ===============================
-
-// ARRAY METHOD: Multiply each element by 2 using map()
-// map() creates new array by applying function to each element
-let arr = [1, 2, 3, 4, 5];
-let doubled = arr.map(x => x * 2);
-console.log(doubled); // [2, 4, 6, 8, 10]
-
-// ===============================
-
-// STRING PROPERTY: Count total characters in a string
-// .length property returns number of characters (including spaces)
-let text = "Shradiya Maharjan";
-console.log(text.length); // 17
-
-// ===============================
-
-// STRING METHOD: Convert string to uppercase
-// .toUpperCase() transforms all letters to capital letters
-let haha_name = "bibek shrestha";
-console.log(haha_name.toUpperCase()); // "BIBEK SHRESTHA"
-
-// ===============================
-
-// MATH OBJECT + SPREAD OPERATOR: Find maximum number in array
-// Math.max() finds largest number, ...spread unpacks array into individual arguments
-let big_nums = [23, 54, 75, 76, 354, 556];
-console.log(Math.max(...big_nums)); // 556
-
-// ===============================
-
-// MATH OBJECT + SPREAD OPERATOR: Find minimum number in array
-// Math.min() finds smallest number from the array
-let random_numbers = [436455, 4654, 665, 576, 577, 6677, 867657, 5764, 4675, 776];
-let min_random_numbers = Math.min(...random_numbers);
-console.log(min_random_numbers); // 576
-
-// ===============================
-
-// KEY CONCEPTS PRACTICED:
-
-// ✓ String methods: split(), reverse(), join(), toUpperCase()
-// ✓ Array methods: map()
-// ✓ Arrow functions (=>)
-// ✓ Spread operator (...)
-// ✓ Math object: Math.max(), Math.min()
-// ✓ String properties: .length
-// ✓ Functions and return statements
-// ===============================
-
-// ===============================
-// END PRACTICE FILE
-// ===============================
-
-console.log("Practice Finished ✅")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-// Array Methods Practice - Map
-const prices = [100, 200, 300, 400];
-const discounted = prices.map(price => price * 0.9);
-console.log(discounted); // 10% discount
-
-// Array Methods Practice - Filter
-const ages = [15, 22, 18, 30, 12, 25];
-const adults = ages.filter(age => age >= 18);
-console.log(adults); // [22, 18, 30, 25]
-
-// Array Methods Practice - Reduce
-const numbers = [1, 2, 3, 4, 5];
-const total = numbers.reduce((sum, num) => sum + num, 0);
-console.log(total); // 15
-
-// Object Destructuring
-const user = {
-    name: "Bibek",
-    user_age: 20,
-    user_city: "Kathmandu"
-};
-const {name, user_age, user_city} = user;
-console.log(`${name} is ${age} years old from ${city}`);
-
-// Spread Operator
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const combined = [...arr1, ...arr2];
-console.log(combined); // [1, 2, 3, 4, 5, 6]
-
-const person = {name: "Bibek", age: 20};
-const updatedPerson = {...person, city: "Kathmandu"};
-console.log(updatedPerson);
-
-// Template Literals
-const playerName = "Messi";
-const goals = 700;
-const message = `${playerName} has scored ${goals} goals in his career!`;
-console.log(message);
-
-// Ternary Operator
-const score = 85;
-const score_result = score >= 50 ? "Pass" : "Fail";
-console.log(score_resultresult);
-
-const userAge = 17;
-const canVote = userAge >= 18 ? "Can vote" : "Cannot vote";
-console.log(canVote);
-
-// forEach Loop
-const my_fruits = ["apple", "banana", "mango", "orange"];
-my_fruits.forEach((fruit, index) => {
-    console.log(`${index + 1}. ${fruit}`);
-});
-
-// Find and FindIndex
-const students = [
-    {name: "Ram", marks: 85},
-    {name: "Shyam", marks: 92},
-    {name: "Hari", marks: 78}
-];
-const topStudent = students.find(student => student.marks > 90);
-console.log(topStudent); // {name: "Shyam", marks: 92}
-
-const index = students.findIndex(student => student.name === "Hari");
-console.log(index); // 2
-
-// Some and Every
-const scores = [45, 67, 89, 92, 78];
-const hasHighScore = scores.some(score => score > 90);
-console.log(hasHighScore); // true
-
-const allPassed = scores.every(score => score >= 40);
-console.log(allPassed); // true
-
-// Sort and Reverse
-const nums = [5, 2, 8, 1, 9];
-const ascending = [...nums].sort((a, b) => a - b);
-console.log(ascending); // [1, 2, 5, 8, 9]
-
-const descending = [...nums].sort((a, b) => b - a);
-console.log(descending); // [9, 8, 5, 2, 1]
-
-*/
