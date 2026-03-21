@@ -263,6 +263,11 @@ let num = 0;
 let sign = num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
 console.log(sign); // "Zero"
 
+let player_score = 88;
+let grade = player_score >= 90 ? "A" : player_score >= 70 ? "B" : player_score >= 50 ? "C" : "Fail";
+
+console.log(grade); // B
+
 // ========== ARRAYS ==========
 
 // Creating arrays
