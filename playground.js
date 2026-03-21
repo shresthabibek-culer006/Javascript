@@ -1,6 +1,6 @@
 // ===============================
 // JAVASCRIPT MASTERY JOURNEY 🚀
-// Practice File: js-practice-hub.js
+// Practice File: playground.js
 // Organized: Beginner → Intermediate → Advanced
 // ===============================
 
@@ -740,3 +740,4 @@ console.log("Age if born in 2004:", calculateAge(2004));
 
 console.log("\n✅ All levels completed! Keep practicing! 🚀\n");
 console.log("SAKYOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO 🔥");
+

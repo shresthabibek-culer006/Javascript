@@ -319,34 +319,315 @@ console.log("Player Status:", player_status); // "Gold"
 
 
 // ===============================
-// 14. CONTROL FLOW (if-else)
+// 14. CONTROL FLOW - COMPLETE GUIDE
 // ===============================
 
-console.log("\n--- IF-ELSE ---");
+console.log("========== CONTROL FLOW ==========\n");
 
-// Multiple conditions with && (AND)
-let player_username = "bibek";
-let password = "1234";
+// ===============================
+// IF-ELSE / ELSE-IF
+// ===============================
 
-if (player_username === "bibek" && password === "1234") {
-  console.log("Login successful");
-} else {
-  console.log("Invalid credentials");
-}
+console.log("--- IF-ELSE / ELSE-IF ---\n");
 
-// Voting eligibility example
-function allowToVote() {
-  let voter_name = "Haku Maicha";
-  let voter_age = 17;
-  
-  if (voter_age >= 18) {
-    console.log("You are allowed to vote for a ghanti 🔔");
+// Simple if-else
+function checkAge(age) {
+  if (age >= 18) {
+    return "Adult";
   } else {
-    console.log("You are not allowed to vote for a ghanti 🔔");
+    return "Minor";
   }
 }
 
-allowToVote();
+console.log(checkAge(20)); // "Adult"
+console.log(checkAge(15)); // "Minor"
 
+// Multiple else-if
+function checkTemperature(temp) {
+  if (temp < 0) {
+    return "Freezing";
+  } else if (temp < 20) {
+    return "Cold";
+  } else if (temp < 30) {
+    return "Warm";
+  } else {
+    return "Hot";
+  }
+}
 
+console.log(checkTemperature(-5));  // "Freezing"
+console.log(checkTemperature(15));  // "Cold"
+console.log(checkTemperature(25));  // "Warm"
+console.log(checkTemperature(35));  // "Hot"
 
+// Nested if-else
+function checkLoginAccess(username, password, age) {
+  if (username && password) {
+    if (age >= 18) {
+      return "Access granted";
+    } else {
+      return "Must be 18+ to access";
+    }
+  } else {
+    return "Invalid credentials";
+  }
+}
+
+console.log(checkLoginAccess("bibek", "1234", 20)); // "Access granted"
+console.log(checkLoginAccess("bibek", "1234", 16)); // "Must be 18+ to access"
+
+// ===============================
+// SWITCH CASE
+// ===============================
+
+console.log("\n--- SWITCH CASE ---\n");
+
+// Basic switch case
+function getDayName(dayNumber) {
+  switch(dayNumber) {
+    case 1:
+      return "Monday";
+    case 2:
+      return "Tuesday";
+    case 3:
+      return "Wednesday";
+    case 4:
+      return "Thursday";
+    case 5:
+      return "Friday";
+    case 6:
+      return "Saturday";
+    case 7:
+      return "Sunday";
+    default:
+      return "Invalid day";
+  }
+}
+
+console.log(getDayName(1)); // "Monday"
+console.log(getDayName(5)); // "Friday"
+console.log(getDayName(9)); // "Invalid day"
+
+// Switch case with multiple values
+function getSeasonByMonth(month) {
+  switch(month) {
+    case 12:
+    case 1:
+    case 2:
+      return "Winter";
+    case 3:
+    case 4:
+    case 5:
+      return "Spring";
+    case 6:
+    case 7:
+    case 8:
+      return "Summer";
+    case 9:
+    case 10:
+    case 11:
+      return "Autumn";
+    default:
+      return "Invalid month";
+  }
+}
+
+console.log(getSeasonByMonth(1));  // "Winter"
+console.log(getSeasonByMonth(7));  // "Summer"
+console.log(getSeasonByMonth(10)); // "Autumn"
+
+// Switch case for calculator
+function calculate(a, b, operator) {
+  switch(operator) {
+    case "+":
+      return a + b;
+    case "-":
+      return a - b;
+    case "*":
+      return a * b;
+    case "/":
+      return b !== 0 ? a / b : "Cannot divide by zero";
+    case "%":
+      return a % b;
+    default:
+      return "Invalid operator";
+  }
+}
+
+console.log(calculate(10, 5, "+")); // 15
+console.log(calculate(10, 5, "*")); // 50
+console.log(calculate(10, 0, "/")); // "Cannot divide by zero"
+
+// ===============================
+// 3. EARLY RETURN PATTERN
+// ===============================
+
+console.log("\n--- EARLY RETURN PATTERN ---\n");
+
+// Grade calculator - Early Return Pattern
+function getGrade(score) {
+  // Handle invalid cases first (early return)
+  if (score < 0 || score > 100) return "Invalid marks ❌";
+  
+  // Return as soon as condition is met (no else needed)
+  if (score >= 90) return "A+";
+  if (score >= 80) return "A";
+  if (score >= 70) return "B";
+  if (score >= 60) return "C";
+  if (score >= 33) return "D";
+  
+  // If nothing matched above, it's a fail
+  return "Fail";
+}
+
+// Test cases
+console.log(getGrade(95));   // A+
+console.log(getGrade(85));   // A
+console.log(getGrade(75));   // B
+console.log(getGrade(65));   // C
+console.log(getGrade(50));   // D
+console.log(getGrade(25));   // Fail
+console.log(getGrade(105));  // Invalid marks ❌
+console.log(getGrade(-5));   // Invalid marks ❌
+
+// Email validation - Early Return
+function validateEmail(email) {
+  // Check for empty string first
+  if (!email) return "Email is required";
+  
+  // Check minimum length
+  if (email.length < 5) return "Email too short";
+  
+  // Check for @ symbol
+  if (!email.includes("@")) return "Email must contain @";
+  
+  // Check for domain
+  if (!email.includes(".")) return "Email must contain domain (.com, .org, etc.)";
+  
+  // All validations passed
+  return "Valid email ✅";
+}
+
+console.log(validateEmail(""));                    // Email is required
+console.log(validateEmail("abc"));                 // Email too short
+console.log(validateEmail("bibek"));               // Email must contain @
+console.log(validateEmail("bibek@gmail"));         // Email must contain domain
+console.log(validateEmail("bibek@gmail.com"));     // Valid email ✅
+
+// User permissions - Early Return
+function checkUserPermission(user) {
+  // Check if user exists
+  if (!user) return "No user found";
+  
+  // Check if user is banned
+  if (user.isBanned) return "User is banned";
+  
+  // Check if email is verified
+  if (!user.isVerified) return "Email not verified";
+  
+  // Check if subscription is active
+  if (!user.hasActiveSubscription) return "No active subscription";
+  
+  // All checks passed
+  return "Full access granted ✅";
+}
+
+console.log(checkUserPermission(null)); // No user found
+console.log(checkUserPermission({isBanned: true})); // User is banned
+console.log(checkUserPermission({isBanned: false, isVerified: false})); // Email not verified
+console.log(checkUserPermission({
+  isBanned: false, 
+  isVerified: true, 
+  hasActiveSubscription: true
+})); // Full access granted ✅
+
+// ===============================
+// 4. ROCK, PAPER, SCISSORS GAME
+// ===============================
+
+console.log("\n--- ROCK, PAPER, SCISSORS GAME ---\n");
+
+function playRockPaperScissors(playerChoice, computerChoice) {
+  // Validate player choice
+  const validChoices = ["rock", "paper", "scissors"];
+  if (!validChoices.includes(playerChoice.toLowerCase())) {
+    return "Invalid choice! Choose rock, paper, or scissors";
+  }
+  
+  // Normalize choices to lowercase
+  const player = playerChoice.toLowerCase();
+  const computer = computerChoice.toLowerCase();
+  
+  // Check for tie
+  if (player === computer) {
+    return `Tie! Both chose ${player}`;
+  }
+  
+  // Determine winner using early return pattern
+  if (player === "rock" && computer === "scissors") return "You win! Rock beats Scissors";
+  if (player === "rock" && computer === "paper") return "You lose! Paper beats Rock";
+  
+  if (player === "paper" && computer === "rock") return "You win! Paper beats Rock";
+  if (player === "paper" && computer === "scissors") return "You lose! Scissors beats Paper";
+  
+  if (player === "scissors" && computer === "paper") return "You win! Scissors beats Paper";
+  if (player === "scissors" && computer === "rock") return "You lose! Rock beats Scissors";
+  
+  return "Something went wrong!";
+}
+
+// Test the game
+console.log(playRockPaperScissors("rock", "scissors"));     // You win! 
+console.log(playRockPaperScissors("rock", "paper"));        // You lose! 
+console.log(playRockPaperScissors("paper", "paper"));       // Tie! 
+console.log(playRockPaperScissors("scissors", "paper"));    // You win! 
+console.log(playRockPaperScissors("banana", "rock"));       // Invalid choice!
+
+// ===============================
+// 5. COMPARISON: ALL 3 PATTERNS
+// ===============================
+
+console.log("\n--- COMPARISON: IF-ELSE vs SWITCH vs EARLY RETURN ---\n");
+
+// Same function, 3 different approaches
+
+// Approach 1: If-Else
+function getUserRoleIfElse(role) {
+  if (role === "admin") {
+    return "Full access";
+  } else if (role === "moderator") {
+    return "Can edit and delete";
+  } else if (role === "user") {
+    return "Can view only";
+  } else {
+    return "Invalid role";
+  }
+}
+
+// Approach 2: Switch Case
+function getUserRoleSwitch(role) {
+  switch(role) {
+    case "admin":
+      return "Full access";
+    case "moderator":
+      return "Can edit and delete";
+    case "user":
+      return "Can view only";
+    default:
+      return "Invalid role";
+  }
+}
+
+// Approach 3: Early Return
+function getUserRoleEarlyReturn(role) {
+  if (role === "admin") return "Full access";
+  if (role === "moderator") return "Can edit and delete";
+  if (role === "user") return "Can view only";
+  return "Invalid role";
+}
+
+console.log("If-Else:", getUserRoleIfElse("admin"));
+console.log("Switch:", getUserRoleSwitch("moderator"));
+console.log("Early Return:", getUserRoleEarlyReturn("user"));
+
+console.log("\n✅ Control Flow concepts completed!\n");
