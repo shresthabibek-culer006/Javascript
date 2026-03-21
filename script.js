@@ -268,6 +268,11 @@ let grade = player_score >= 90 ? "A" : player_score >= 70 ? "B" : player_score >
 
 console.log(grade); // B
 
+let player_points = 100;
+
+let player_status = player_points >= 100 ? "Gold" : player_points >= 50 ? "Silver" : player_points < 50 ? "Bronze" : "Invalid Output";
+console.log(player_status);
+
 // ========== ARRAYS ==========
 
 // Creating arrays
