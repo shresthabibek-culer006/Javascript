@@ -175,11 +175,86 @@ if (value) {
   console.log("Falsy value detected");
 }
 
+// ===============================
+// 9. FUNCTIONS
+// ===============================
+
+console.log("\n--- FUNCTIONS ---");
+
+// Arrow Function - Simple
+const cube = num => {
+  return num * num * num;
+};
+console.log("Cube of 7:", cube(7));
+
+// Arrow Function - Complex logic
+const greatestAmongThree = (a, b, c) => {
+  if (a > b && a > c) {
+    return "A is the Greatest Among All";
+  } else if (b > a && b > c) {
+    return "B is the Greatest Among All";
+  } else if (c > a && c > b) {
+    return "C is the Greatest Among All";
+  } else {
+    return "Some values are equal";
+  }
+};
+console.log(greatestAmongThree(34, 56, 45));
+
+// Grade calculator function
+const getGrade = score => {
+  if (score <= 32) return "Fail";
+  else if (score >= 33 && score <= 59) return "D";
+  else if (score >= 60 && score <= 69) return "C";
+  else if (score >= 70 && score <= 79) return "B";
+  else if (score >= 80 && score <= 89) return "A";
+  else if (score >= 90 && score <= 100) return "A+";
+  else return "Invalid Score";
+};
+console.log("Grade for 18:", getGrade(18)); // "Fail"
+
+// ===============================
+// 10. OBJECTS & ARRAYS
+// ===============================
+
+console.log("\n--- OBJECTS & ARRAYS ---");
+
+const student = {
+  student_name: "Shradiya",
+  student_age: 17,
+  skills: ["HTML", "CSS", "JAVASCRIPT"]
+};
+
+// Accessing object properties
+console.log("Student name:", student.student_name);
+console.log("Second skill:", student.skills[1]); // "CSS"
+
+// ===============================
+// 11. LOOPS
+// ===============================
+
+console.log("\n--- LOOPS ---");
+
+// For loop
+for (let i = 0; i <= 5; i++) {
+  console.log("Number:", i);
+}
+
+// ===============================
+// 12. NaN EXAMPLE
+// ===============================
+
+console.log("\n--- NaN EXAMPLE ---");
+
+let result = 2 * "text";
+console.log("Result:", result);        // NaN
+console.log("Type:", typeof result);   // "number" (failed number operation)
+
 // Falsy values: false, 0, "", null, undefined, NaN, document.all
 // Truthy values: Everything else!
 
 // ===============================
-// 9. OPERATORS
+// 13. OPERATORS
 // ===============================
 
 console.log("\n--- OPERATORS ---");
@@ -221,8 +296,30 @@ count++;   // 6 (post-increment)
 count--;   // 6 (post-decrement)
 console.log("Count:", count);
 
+console.log("\n--- TERNARY OPERATOR ---");
+
+// Simple ternary
+let num = 0;
+let sign = num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
+console.log("Sign:", sign); // "Zero"
+
+// Grade system using ternary
+let player_score = 88;
+let grade = player_score >= 90 ? "A" : 
+            player_score >= 70 ? "B" : 
+            player_score >= 50 ? "C" : "Fail";
+console.log("Grade:", grade); // "B"
+
+// Player status
+let player_points = 100;
+let player_status = player_points >= 100 ? "Gold" : 
+                    player_points >= 50 ? "Silver" : 
+                    player_points < 50 ? "Bronze" : "Invalid";
+console.log("Player Status:", player_status); // "Gold"
+
+
 // ===============================
-// 10. CONTROL FLOW (if-else)
+// 14. CONTROL FLOW (if-else)
 // ===============================
 
 console.log("\n--- IF-ELSE ---");
@@ -251,106 +348,5 @@ function allowToVote() {
 
 allowToVote();
 
-// ===============================
-// 11. TERNARY OPERATOR
-// ===============================
 
-console.log("\n--- TERNARY OPERATOR ---");
 
-// Simple ternary
-let num = 0;
-let sign = num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
-console.log("Sign:", sign); // "Zero"
-
-// Grade system using ternary
-let player_score = 88;
-let grade = player_score >= 90 ? "A" : 
-            player_score >= 70 ? "B" : 
-            player_score >= 50 ? "C" : "Fail";
-console.log("Grade:", grade); // "B"
-
-// Player status
-let player_points = 100;
-let player_status = player_points >= 100 ? "Gold" : 
-                    player_points >= 50 ? "Silver" : 
-                    player_points < 50 ? "Bronze" : "Invalid";
-console.log("Player Status:", player_status); // "Gold"
-
-// ===============================
-// 12. FUNCTIONS
-// ===============================
-
-console.log("\n--- FUNCTIONS ---");
-
-// Arrow Function - Simple
-const cube = num => {
-  return num * num * num;
-};
-console.log("Cube of 7:", cube(7));
-
-// Arrow Function - Complex logic
-const greatestAmongThree = (a, b, c) => {
-  if (a > b && a > c) {
-    return "A is the Greatest Among All";
-  } else if (b > a && b > c) {
-    return "B is the Greatest Among All";
-  } else if (c > a && c > b) {
-    return "C is the Greatest Among All";
-  } else {
-    return "Some values are equal";
-  }
-};
-console.log(greatestAmongThree(34, 56, 45));
-
-// Grade calculator function
-const getGrade = score => {
-  if (score <= 32) return "Fail";
-  else if (score >= 33 && score <= 59) return "D";
-  else if (score >= 60 && score <= 69) return "C";
-  else if (score >= 70 && score <= 79) return "B";
-  else if (score >= 80 && score <= 89) return "A";
-  else if (score >= 90 && score <= 100) return "A+";
-  else return "Invalid Score";
-};
-console.log("Grade for 18:", getGrade(18)); // "Fail"
-
-// ===============================
-// 13. OBJECTS & ARRAYS
-// ===============================
-
-console.log("\n--- OBJECTS & ARRAYS ---");
-
-const student = {
-  student_name: "Shradiya",
-  student_age: 17,
-  skills: ["HTML", "CSS", "JAVASCRIPT"]
-};
-
-// Accessing object properties
-console.log("Student name:", student.student_name);
-console.log("Second skill:", student.skills[1]); // "CSS"
-
-// ===============================
-// 14. LOOPS
-// ===============================
-
-console.log("\n--- LOOPS ---");
-
-// For loop
-for (let i = 0; i <= 5; i++) {
-  console.log("Number:", i);
-}
-
-// ===============================
-// 15. NaN EXAMPLE
-// ===============================
-
-console.log("\n--- NaN EXAMPLE ---");
-
-let result = 2 * "text";
-console.log("Result:", result);        // NaN
-console.log("Type:", typeof result);   // "number" (failed number operation)
-
-// ===============================
-// END OF PRACTICE
-// ===============================
