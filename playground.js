@@ -116,6 +116,10 @@ console.log("Length:", text.length); // 17
 let haha_name = "bibek shrestha";
 console.log(haha_name.toUpperCase()); // "BIBEK SHRESTHA"
 
+// Convert to lowercase
+let huhu_name = "BIBEK SHRESTHA";
+console.log(haha_name.toLowerCase()); // "bibek shrestha"
+
 // ===============================
 // 📈 LEVEL 2: INTERMEDIATE
 // Array methods, objects, and practical functions
@@ -162,14 +166,16 @@ console.log("Sum:", numbers_sum); // 15
 // ========== PRACTICAL EXAMPLE: STUDENT FILTERING ==========
 
 const students = [
-    {name: "Bibek", marks: 85},
-    {name: "Shradiya", marks: 92},
-    {name: "Haku", marks: 78}
+    {name:"Bibek",level:"l5",marks:90},
+    {name:"Shradiya",level:"14",marks:88},
+    {name:"Haku",level:"16",marks:68},
+    {name:"Sanumaya",level:"14",marks:98},
+    {name:"moomin",level:"15",marks:99}
 ];
 
-// Filter students with marks >= 80
-const toppers = students.filter(student => student.marks >= 80);
-console.log("Toppers:", toppers);
+const toppers = students.filter(student => student.marks >= 90);
+console.log("Topper Students : ")
+console.log(toppers);
 
 // ========== OBJECTS MANIPULATION ==========
 
