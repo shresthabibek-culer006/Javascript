@@ -263,7 +263,7 @@ console.log("Merged:", merged);
 // ========== OBJECT DESTRUCTURING ==========
 
 const student_data = {
-    his_name: "Bibek",
+    his_name: "Bibek", 
     his_age: 20,
     his_course: "Web Dev"
 };
@@ -304,7 +304,7 @@ const sorted = [...players].sort((a, b) => b.goals - a.goals);
 console.log("Sorted by goals:", sorted);
 
 // Add new player
-players.push({name: "Haaland", goals: 250, team: "Man City"});
+players.push({name: "Haaland", goals: 250, team: "Man City"}); 
 
 // Calculate total goals
 const totalGoals = players.reduce((sum, player) => sum + player.goals, 0);
