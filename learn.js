@@ -9,3 +9,10 @@ function countCharacters(str, char) {
 }
 
 console.log(countCharacters("hello world", "l")); // 3
+
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
+console.log(capitalize("hello")); // "Hello"
+console.log(capitalize("javaScript")); // "Javascript"
