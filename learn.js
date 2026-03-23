@@ -16,3 +16,15 @@ function capitalize(str) {
 
 console.log(capitalize("hello")); // "Hello"
 console.log(capitalize("javaScript")); // "Javascript"
+
+function sumOddNumbers(arr) {
+    let sum = 0;
+    for (let num of arr) {
+        if (num % 2 !== 0) {
+            sum += num;
+        }
+    }
+    return sum;
+}
+
+console.log(sumOddNumbers([1, 2, 3, 4, 5])); // 9 (1+3+5)
