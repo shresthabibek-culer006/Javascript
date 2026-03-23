@@ -28,3 +28,11 @@ function sumOddNumbers(arr) {
 }
 
 console.log(sumOddNumbers([1, 2, 3, 4, 5])); // 9 (1+3+5)
+
+function isVowel(char) {
+    const vowels = "aeiouAEIOU";
+    return vowels.includes(char);
+}
+
+console.log(isVowel("a")); // true
+console.log(isVowel("b")); // false
