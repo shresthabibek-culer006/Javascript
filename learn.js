@@ -97,3 +97,10 @@ function countOccurrences(arr, value) {
 }
 
 console.log(countOccurrences([1, 2, 3, 2, 2, 4], 2)); // 3
+
+
+function flattenArray(arr) {
+    return arr.flat();
+}
+
+console.log(flattenArray([1, [2, 3], [4, [5]]])); // [1, 2, 3, 4, [5]]
