@@ -58,3 +58,14 @@ function countEvenOdd(arr) {
 }
 
 console.log(countEvenOdd([1, 2, 3, 4, 5, 6])); // {even: 3, odd: 3}
+
+
+function repeatString(str, times) {
+    let result = "";
+    for (let i = 0; i < times; i++) {
+        result += str;
+    }
+    return result;
+}
+
+console.log(repeatString("Ha", 3)); // "HaHaHa"
