@@ -91,3 +91,9 @@ function findIndex(arr, value) {
 }
 
 console.log(findIndex([10, 20, 30], 20)); // 1
+
+function countOccurrences(arr, value) {
+    return arr.filter(item => item === value).length;
+}
+
+console.log(countOccurrences([1, 2, 3, 2, 2, 4], 2)); // 3
