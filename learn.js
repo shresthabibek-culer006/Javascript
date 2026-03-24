@@ -69,3 +69,14 @@ function repeatString(str, times) {
 }
 
 console.log(repeatString("Ha", 3)); // "HaHaHa"
+
+function getInitials(name) {
+    const words = name.split(" ");
+    let initials = "";
+    for (let word of words) {
+        initials += word[0].toUpperCase();
+    }
+    return initials;
+}
+
+console.log(getInitials("Bibek Shrestha")); // "BS"
