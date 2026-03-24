@@ -104,3 +104,10 @@ function flattenArray(arr) {
 }
 
 console.log(flattenArray([1, [2, 3], [4, [5]]])); // [1, 2, 3, 4, [5]]
+
+function isEmpty(arr) {
+    return arr.length === 0;
+}
+
+console.log(isEmpty([])); // true
+console.log(isEmpty([1, 2])); // false
