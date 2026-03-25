@@ -125,3 +125,10 @@ function getObjectKeys(obj) {
 }
 
 console.log(getObjectKeys({name: "Ram", age: 25})); // ["name", "age"]
+
+function swapValues(a, b) {
+    return [b, a];
+}
+
+const [x, y] = swapValues(5, 10);
+console.log(x, y); // 10 5
