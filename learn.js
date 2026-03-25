@@ -111,3 +111,11 @@ function isEmpty(arr) {
 
 console.log(isEmpty([])); // true
 console.log(isEmpty([1, 2])); // false
+
+function mergeObjects(obj1, obj2) {
+    return {...obj1, ...obj2};
+}
+
+const a = {name: "Bibek"};
+const b = {age: 20};
+console.log(mergeObjects(a, b)); // {name: "Bibek", age: 20}
