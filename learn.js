@@ -132,3 +132,10 @@ function swapValues(a, b) {
 
 const [x, y] = swapValues(5, 10);
 console.log(x, y); // 10 5
+
+function getRandomElement(arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+}
+
+console.log(getRandomElement([1, 2, 3, 4, 5]));
