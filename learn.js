@@ -119,3 +119,9 @@ function mergeObjects(obj1, obj2) {
 const a = {name: "Bibek"};
 const b = {age: 20};
 console.log(mergeObjects(a, b)); // {name: "Bibek", age: 20}
+
+function getObjectKeys(obj) {
+    return Object.keys(obj);
+}
+
+console.log(getObjectKeys({name: "Ram", age: 25})); // ["name", "age"]
