@@ -184,3 +184,12 @@ const grouped = students.reduce((acc, student) => {
 }, {});
 
 console.log(grouped);
+
+function deepClone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+}
+
+const original = {name: "Bibek", address: {city: "KTM"}};
+const copy = deepClone(original);
+copy.address.city = "PKR";
+console.log(original.address.city); // "KTM" (unchanged)
