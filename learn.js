@@ -147,3 +147,12 @@ function toTitleCase(str) {
 }
 
 console.log(toTitleCase("hello world")); // "Hello World"
+
+const users = [
+    {name: "Ram", age: 25},
+    {name: "Shyam", age: 17},
+    {name: "Hari", age: 20}
+];
+
+const adults = users.filter(user => user.age >= 18);
+console.log(adults);
