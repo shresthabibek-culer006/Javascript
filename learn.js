@@ -161,3 +161,12 @@ const scores = {math: 85, english: 90, science: 78};
 
 const total = Object.values(scores).reduce((sum, score) => sum + score, 0);
 console.log(total); // 253
+
+
+function hasProperty(obj, prop) {
+    return prop in obj;
+}
+
+const person = {name: "Bibek", age: 20};
+console.log(hasProperty(person, "name")); // true
+console.log(hasProperty(person, "salary")); // false
