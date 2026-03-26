@@ -156,3 +156,8 @@ const users = [
 
 const adults = users.filter(user => user.age >= 18);
 console.log(adults);
+
+const scores = {math: 85, english: 90, science: 78};
+
+const total = Object.values(scores).reduce((sum, score) => sum + score, 0);
+console.log(total); // 253
