@@ -170,3 +170,17 @@ function hasProperty(obj, prop) {
 const person = {name: "Bibek", age: 20};
 console.log(hasProperty(person, "name")); // true
 console.log(hasProperty(person, "salary")); // false
+
+const students = [
+    {name: "Ram", grade: "A"},
+    {name: "Shyam", grade: "B"},
+    {name: "Hari", grade: "A"}
+];
+
+const grouped = students.reduce((acc, student) => {
+    if (!acc[student.grade]) acc[student.grade] = [];
+    acc[student.grade].push(student);
+    return acc;
+}, {});
+
+console.log(grouped);
