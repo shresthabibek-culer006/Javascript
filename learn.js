@@ -193,3 +193,13 @@ const original = {name: "Bibek", address: {city: "KTM"}};
 const copy = deepClone(original);
 copy.address.city = "PKR";
 console.log(original.address.city); // "KTM" (unchanged)
+
+function fibonacci(n) {
+    const fib = [0, 1];
+    for (let i = 2; i < n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+    return fib;
+}
+
+console.log(fibonacci(8)); // [0, 1, 1, 2, 3, 5, 8, 13]
