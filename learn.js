@@ -269,3 +269,13 @@ function range(start, end) {
 
 console.log(range(1, 5)); // [1, 2, 3, 4, 5]
 console.log(range(10, 15)); // [10, 11, 12, 13, 14, 15]
+
+
+const products = [
+    {name: "Laptop", price: 80000},
+    {name: "Phone", price: 30000},
+    {name: "Tablet", price: 45000}
+];
+
+const sorted = products.sort((a, b) => a.price - b.price);
+console.log(sorted);
