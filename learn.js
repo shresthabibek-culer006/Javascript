@@ -257,3 +257,15 @@ function mostFrequent(arr) {
 }
 
 console.log(mostFrequent([1, 2, 3, 2, 2, 4])); // 2
+
+
+function range(start, end) {
+    const result = [];
+    for (let i = start; i <= end; i++) {
+        result.push(i);
+    }
+    return result;
+}
+
+console.log(range(1, 5)); // [1, 2, 3, 4, 5]
+console.log(range(10, 15)); // [10, 11, 12, 13, 14, 15]
