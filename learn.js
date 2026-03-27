@@ -279,3 +279,18 @@ const products = [
 
 const sorted = products.sort((a, b) => a.price - b.price);
 console.log(sorted);
+
+function arrayToObject(arr, key) {
+    return arr.reduce((obj, item) => {
+        obj[item[key]] = item;
+        return obj;
+    }, {});
+}
+
+const users = [
+    {id: 1, name: "Ram"},
+    {id: 2, name: "Shyam"}
+];
+
+console.log(arrayToObject(users, "id"));
+// {1: {id: 1, name: "Ram"}, 2: {id: 2, name: "Shyam"}}
