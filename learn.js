@@ -221,3 +221,14 @@ function difference(arr1, arr2) {
 }
 
 console.log(difference([1, 2, 3, 4], [3, 4, 5, 6])); // [1, 2]
+
+function shuffleArray(arr) {
+    const shuffled = [...arr];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+console.log(shuffleArray([1, 2, 3, 4, 5]));
