@@ -238,3 +238,22 @@ function getUnique(arr) {
 }
 
 console.log(getUnique([1, 2, 2, 3, 4, 4, 5])); // [1, 2, 3, 4, 5]
+
+
+function mostFrequent(arr) {
+    const frequency = {};
+    let maxCount = 0;
+    let mostFreq = arr[0];
+    
+    arr.forEach(item => {
+        frequency[item] = (frequency[item] || 0) + 1;
+        if (frequency[item] > maxCount) {
+            maxCount = frequency[item];
+            mostFreq = item;
+        }
+    });
+    
+    return mostFreq;
+}
+
+console.log(mostFrequent([1, 2, 3, 2, 2, 4])); // 2
