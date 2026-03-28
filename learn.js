@@ -302,3 +302,11 @@ function calculatePercentage(obtained, total) {
 
 console.log(calculatePercentage(85, 100)); // "85.00"
 console.log(calculatePercentage(450, 500)); // "90.00"
+
+function truncate(str, maxLength) {
+    return str.length > maxLength 
+        ? str.slice(0, maxLength) + "..." 
+        : str;
+}
+
+console.log(truncate("Hello World", 5)); // "Hello..."
