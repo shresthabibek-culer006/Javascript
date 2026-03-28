@@ -295,3 +295,10 @@ const app_users = [
 
 console.log(arrayToObject(app_users, "id"));
 // {1: {id: 1, name: "Ram"}, 2: {id: 2, name: "Shyam"} 3: {id: 3, name: "Hari"}}
+
+function calculatePercentage(obtained, total) {
+    return ((obtained / total) * 100).toFixed(2);
+}
+
+console.log(calculatePercentage(85, 100)); // "85.00"
+console.log(calculatePercentage(450, 500)); // "90.00"
