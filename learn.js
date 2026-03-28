@@ -318,3 +318,14 @@ function isAnagram(str1, str2) {
 
 console.log(isAnagram("listen", "silent")); // true
 console.log(isAnagram("hello", "world")); // false
+
+
+function daysUntil(targetDate) {
+    const today = new Date();
+    const target = new Date(targetDate);
+    const diffTime = target - today;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays;
+}
+
+console.log(daysUntil("2026-12-31")); // Days until New Year
