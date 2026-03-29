@@ -378,3 +378,10 @@ const leaderboard = players
     }));
 
 console.log(leaderboard);
+
+function formatCurrency(amount, currency = "NPR") {
+    return `${currency} ${amount.toLocaleString()}`;
+}
+
+console.log(formatCurrency(125000)); // "NPR 125,000"
+console.log(formatCurrency(5000000)); // "NPR 5,000,000"
