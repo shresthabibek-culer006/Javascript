@@ -329,3 +329,12 @@ function daysUntil(targetDate) {
 }
 
 console.log(daysUntil("2026-12-31")); // Days until New Year
+
+
+function isValidPhone(phone) {
+    const pattern = /^9[78]\d{8}$/;
+    return pattern.test(phone);
+}
+
+console.log(isValidPhone("9841234567")); // true (Nepal)
+console.log(isValidPhone("1234567890")); // false
