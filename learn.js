@@ -338,3 +338,11 @@ function isValidPhone(phone) {
 
 console.log(isValidPhone("9841234567")); // true (Nepal)
 console.log(isValidPhone("1234567890")); // false
+
+
+function extractDigits(str) {
+    return str.match(/\d/g) || [];
+}
+
+console.log(extractDigits("abc123xyz456")); // ["1", "2", "3", "4", "5", "6"]
+
