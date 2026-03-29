@@ -362,3 +362,19 @@ function paginate(arr, pageSize, pageNumber) {
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log(paginate(items, 3, 1)); // [1, 2, 3]
 console.log(paginate(items, 3, 2)); // [4, 5, 6]
+
+
+const players = [
+    {name: "Messi", goals: 700},
+    {name: "Ronaldo", goals: 850},
+    {name: "Neymar", goals: 400}
+];
+
+const leaderboard = players
+    .sort((a, b) => b.goals - a.goals)
+    .map((player, index) => ({
+        rank: index + 1,
+        ...player
+    }));
+
+console.log(leaderboard);
