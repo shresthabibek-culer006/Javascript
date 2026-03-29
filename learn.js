@@ -354,3 +354,11 @@ function toCamelCase(str) {
 
 console.log(toCamelCase("hello world test")); // "helloWorldTest"
 
+function paginate(arr, pageSize, pageNumber) {
+    const start = (pageNumber - 1) * pageSize;
+    return arr.slice(start, start + pageSize);
+}
+
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(paginate(items, 3, 1)); // [1, 2, 3]
+console.log(paginate(items, 3, 2)); // [4, 5, 6]
