@@ -389,7 +389,8 @@ console.log(formatCurrency(5000000)); // "NPR 5,000,000"
 const our_products = [
     {name: "Laptop", category: "Electronics"},
     {name: "Book", category: "Education"},
-    {name: "Phone", category: "Electronics"}
+    {name: "Phone", category: "Electronics"},
+    {name: "Keyboard", category: "Electronics"}
 ];
 
 function searchProducts(query, category = null) {
