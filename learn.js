@@ -346,3 +346,11 @@ function extractDigits(str) {
 
 console.log(extractDigits("abc123xyz456")); // ["1", "2", "3", "4", "5", "6"]
 
+function toCamelCase(str) {
+    return str
+        .toLowerCase()
+        .replace(/[^a-zA-Z0-9]+(.)/g, (_, char) => char.toUpperCase());
+}
+
+console.log(toCamelCase("hello world test")); // "helloWorldTest"
+
