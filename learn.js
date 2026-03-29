@@ -386,14 +386,14 @@ function formatCurrency(amount, currency = "NPR") {
 console.log(formatCurrency(125000)); // "NPR 125,000"
 console.log(formatCurrency(5000000)); // "NPR 5,000,000"
 
-const products = [
+const our_products = [
     {name: "Laptop", category: "Electronics"},
     {name: "Book", category: "Education"},
     {name: "Phone", category: "Electronics"}
 ];
 
 function searchProducts(query, category = null) {
-    return products.filter(p => {
+    return our_products.filter(p => {
         const matchesQuery = p.name.toLowerCase().includes(query.toLowerCase());
         const matchesCategory = !category || p.category === category;
         return matchesQuery && matchesCategory;
