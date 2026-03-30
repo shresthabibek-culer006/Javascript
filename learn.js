@@ -402,3 +402,15 @@ function searchProducts(query, category = null) {
 }
 
 console.log(searchProducts("lap")); // [{name: "Laptop", ...}]
+
+function transpose(matrix) {
+    return matrix[0].map((_, colIndex) => 
+        matrix.map(row => row[colIndex])
+    );
+}
+
+const matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
+console.log(transpose(matrix)); // [[1, 4], [2, 5], [3, 6]]
