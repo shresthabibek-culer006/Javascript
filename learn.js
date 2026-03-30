@@ -287,10 +287,10 @@ function arrayToObject(arr, key) {
     }, {});
 }
 
-const users = [
+const app_users = [
     {id: 1, name: "Ram"},
     {id: 2, name: "Shyam"}
 ];
 
-console.log(arrayToObject(users, "id"));
+console.log(arrayToObject(app_users, "id"));
 // {1: {id: 1, name: "Ram"}, 2: {id: 2, name: "Shyam"}}
