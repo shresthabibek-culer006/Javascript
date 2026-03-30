@@ -414,3 +414,20 @@ const matrix = [
     [4, 5, 6]
 ];
 console.log(transpose(matrix)); // [[1, 4], [2, 5], [3, 6]]
+
+async function retry(fn, maxRetries = 3) {
+    for (let i = 0; i < maxRetries; i++) {
+        try {
+            return await fn();
+        } catch (error) {
+            if (i === maxRetries - 1) throw error;
+            console.log(`Retry ${i + 1}/${maxRetries}`);
+        }
+    }
+}
+
+// Usage example
+retry(() => {
+    console.log("Attempting...");
+    return Promise.resolve("Success!");
+});
